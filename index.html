@@ -84,6 +84,17 @@ header {
   transition: color 0.3s;
 }
 .nav-links a:hover { color: var(--primary); }
+.nav-links .nav-cta {
+  background: var(--primary);
+  color: var(--white) !important;
+  padding: 10px 20px;
+  border-radius: 50px;
+  transition: background 0.3s, transform 0.3s;
+}
+.nav-links .nav-cta:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
 
 .burger {
   display: none;
@@ -134,6 +145,21 @@ header {
   font-weight: 500;
   color: var(--text);
   text-decoration: none;
+}
+.mobile-menu-secondary {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.mobile-menu-secondary a {
+  font-size: 14px;
+  color: var(--text-light);
+  padding: 8px 16px;
+  background: var(--bg);
+  border-radius: 20px;
 }
 
 /* ══════════════════════════════════════
@@ -809,13 +835,10 @@ footer {
     </a>
     <ul class="nav-links">
       <li><a href="#about">活動内容</a></li>
-      <li><a href="#news">お知らせ</a></li>
       <li><a href="#gallery">ギャラリー</a></li>
-      <li><a href="#ngb99">NGB99</a></li>
-      <li><a href="#video">動画</a></li>
-      <li><a href="#customer">お客様の声</a></li>
       <li><a href="#profile">プロフィール</a></li>
-      <li><a href="#contact">お問い合わせ</a></li>
+      <li><a href="#news">お知らせ</a></li>
+      <li><a href="#contact" class="nav-cta">お問い合わせ</a></li>
     </ul>
     <button class="burger" onclick="toggleMobileMenu()">
       <span></span><span></span><span></span>
@@ -828,15 +851,17 @@ footer {
   <button class="mobile-menu-close" onclick="toggleMobileMenu()">&times;</button>
   <ul>
     <li><a href="#about" onclick="toggleMobileMenu()">活動内容</a></li>
-    <li><a href="#news" onclick="toggleMobileMenu()">お知らせ</a></li>
     <li><a href="#gallery" onclick="toggleMobileMenu()">ギャラリー</a></li>
-    <li><a href="#ngb99" onclick="toggleMobileMenu()">NGB99</a></li>
-    <li><a href="#video" onclick="toggleMobileMenu()">動画</a></li>
-    <li><a href="#customer" onclick="toggleMobileMenu()">お客様の声</a></li>
     <li><a href="#profile" onclick="toggleMobileMenu()">プロフィール</a></li>
+    <li><a href="#news" onclick="toggleMobileMenu()">お知らせ</a></li>
     <li><a href="#contact" onclick="toggleMobileMenu()">お問い合わせ</a></li>
-    <li><a href="https://ndanda.base.shop/" target="_blank">nda焙 SHOP</a></li>
   </ul>
+  <div class="mobile-menu-secondary">
+    <a href="#ngb99" onclick="toggleMobileMenu()">NGB99</a>
+    <a href="#video" onclick="toggleMobileMenu()">動画</a>
+    <a href="#customer" onclick="toggleMobileMenu()">お客様の声</a>
+    <a href="https://ndanda.base.shop/" target="_blank">nda焙 SHOP</a>
+  </div>
 </div>
 
 <!-- HERO -->
