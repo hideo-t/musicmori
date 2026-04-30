@@ -915,6 +915,19 @@ footer {
         <p>JFN全国38局放送「サードプレイス」出演など、活動がメディアでも取り上げられています。</p>
       </div>
     </div>
+
+    <!-- 協賛金のお願い -->
+    <div class="sponsor-box fade-in" style="margin-top: 48px; padding: 32px; background: linear-gradient(135deg, var(--accent-light), var(--cream)); border-radius: var(--radius-lg); text-align: center;">
+      <h3 style="font-family: var(--font-serif); font-size: 20px; color: var(--primary); margin-bottom: 16px;">協賛金のお願い</h3>
+      <p style="font-size: 14px; color: var(--text-light); line-height: 2; max-width: 700px; margin: 0 auto 16px;">
+        「魂に響くギフトコンサート」事業は、地域づくりのための助成金のみでは多くの学校や介護施設を訪問することが難しい状況です。
+        事業の趣旨にご賛同いただける方々を広く募りたく思います。
+      </p>
+      <p style="font-size: 14px; color: var(--primary); font-weight: 600;">
+        協賛金：一口 1,000円より
+      </p>
+      <a href="#contact" style="display: inline-block; margin-top: 16px; padding: 12px 32px; background: var(--primary); color: var(--white); text-decoration: none; border-radius: 50px; font-weight: 600; font-size: 14px;">お問い合わせはこちら</a>
+    </div>
   </div>
 </section>
 
@@ -990,11 +1003,14 @@ footer {
     <div class="gallery-years fade-in">
       <button class="year-btn active" onclick="showGallery('2021')">2021</button>
       <button class="year-btn" onclick="showGallery('2019')">2019</button>
+      <button class="year-btn" onclick="showGallery('2018')">2018</button>
       <button class="year-btn" onclick="showGallery('2017')">2017</button>
       <button class="year-btn" onclick="showGallery('2016')">2016</button>
       <button class="year-btn" onclick="showGallery('2015')">2015</button>
       <button class="year-btn" onclick="showGallery('2014')">2014</button>
       <button class="year-btn" onclick="showGallery('2013')">2013</button>
+      <button class="year-btn" onclick="showGallery('history')">履歴</button>
+      <button class="year-btn" onclick="showGallery('news')">新聞</button>
     </div>
 
     <!-- 2021 Gallery -->
@@ -1057,6 +1073,35 @@ footer {
         </div>
         <div class="gallery-item" onclick="openLightbox('images/gallery2019/2019-31s.jpg')">
           <img src="images/gallery2019/2019-31s.jpg" alt="コンサート" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <!-- 2018 Gallery -->
+    <div class="gallery-tab" id="gallery-2018">
+      <h3 class="gallery-title">2018年 奇跡のレッスン継続</h3>
+      <p class="gallery-desc">
+        復興財団支援による「奇跡のレッスン」声楽指導プログラムを継続。
+        NGB99の活動も継続し、地域活性化に貢献しました。
+      </p>
+      <div class="gallery-grid">
+        <div class="gallery-item" onclick="openLightbox('images/gallery2017/image13s.jpg')">
+          <img src="images/gallery2017/image13s.jpg" alt="レッスン" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2017/image14s.jpg')">
+          <img src="images/gallery2017/image14s.jpg" alt="レッスン" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2017/image15s.jpg')">
+          <img src="images/gallery2017/image15s.jpg" alt="コンサート" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2017/image16s.jpg')">
+          <img src="images/gallery2017/image16s.jpg" alt="コンサート" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2017/image17s.jpg')">
+          <img src="images/gallery2017/image17s.jpg" alt="活動" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2017/image18s.jpg')">
+          <img src="images/gallery2017/image18s.jpg" alt="活動" loading="lazy">
         </div>
       </div>
     </div>
@@ -1267,6 +1312,45 @@ footer {
         </div>
         <div class="gallery-item" onclick="openLightbox('images/gallery2013/20131011-4.jpg')">
           <img src="images/gallery2013/20131011-4.jpg" alt="コンサート" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <!-- Concert History -->
+    <div class="gallery-tab" id="gallery-history">
+      <h3 class="gallery-title">コンサート履歴 2010-2014</h3>
+      <p class="gallery-desc">
+        震災前から震災後にかけて、福島県内外で実施したコンサートの記録。
+        Grand Hyatt Tokyo、奈良、静岡、広島、兵庫、和歌山、大阪など各地で公演。
+      </p>
+      <div class="gallery-grid">
+        <div class="gallery-item" onclick="openLightbox('images/live/20101217.jpg')">
+          <img src="images/live/20101217.jpg" alt="2010年12月" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/live/20110312.jpg')">
+          <img src="images/live/20110312.jpg" alt="2011年3月" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/live/20110423.jpg')">
+          <img src="images/live/20110423.jpg" alt="2011年4月" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <!-- Newspaper Coverage -->
+    <div class="gallery-tab" id="gallery-news">
+      <h3 class="gallery-title">新聞掲載記事 2010-2014</h3>
+      <p class="gallery-desc">
+        活動が新聞で取り上げられた記事の一覧。2010年4月から2014年3月まで31件以上の掲載。
+      </p>
+      <div class="gallery-grid">
+        <div class="gallery-item" onclick="openLightbox('images/newspaper/20100404.gif')">
+          <img src="images/newspaper/20100404.gif" alt="2010年4月4日" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/newspaper/20140301.gif')">
+          <img src="images/newspaper/20140301.gif" alt="2014年3月1日" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/shinbun.gif')">
+          <img src="images/shinbun.gif" alt="新聞記事" loading="lazy">
         </div>
       </div>
     </div>
@@ -1570,6 +1654,8 @@ footer {
     <a href="#profile">プロフィール</a>
     <a href="#contact">お問い合わせ</a>
     <a href="https://ndanda.base.shop/" target="_blank">nda焙 SHOP</a>
+    <a href="https://www.facebook.com/HunniXiangkugifutokonsato" target="_blank">Facebook (団体)</a>
+    <a href="https://www.facebook.com/Taeko.musicmori" target="_blank">Facebook (代表)</a>
   </div>
   <p class="footer-copy">&copy; 2016 おんがくの杜 All rights Reserved.</p>
 </footer>
