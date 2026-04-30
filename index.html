@@ -50,7 +50,7 @@ header {
   z-index: 100;
 }
 .header-inner {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 16px 24px;
   display: flex;
@@ -63,9 +63,7 @@ header {
   gap: 12px;
   text-decoration: none;
 }
-.logo img {
-  height: 50px;
-}
+.logo img { height: 50px; }
 .logo-text {
   font-family: var(--font-serif);
   font-size: 18px;
@@ -75,11 +73,11 @@ header {
 
 .nav-links {
   display: flex;
-  gap: 28px;
+  gap: 20px;
   list-style: none;
 }
 .nav-links a {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
   color: var(--text-light);
   text-decoration: none;
@@ -100,6 +98,42 @@ header {
   height: 2px;
   background: var(--primary);
   margin: 5px 0;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--white);
+  z-index: 200;
+  padding: 80px 24px 24px;
+}
+.mobile-menu.active { display: block; }
+.mobile-menu-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+  color: var(--primary);
+}
+.mobile-menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.mobile-menu a {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text);
+  text-decoration: none;
 }
 
 /* ══════════════════════════════════════
@@ -163,7 +197,7 @@ header {
   padding: 80px 24px;
 }
 .section-inner {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 .section-header {
@@ -187,7 +221,7 @@ header {
 .section-desc {
   font-size: 15px;
   color: var(--text-light);
-  max-width: 600px;
+  max-width: 700px;
   margin: 16px auto 0;
   line-height: 2;
 }
@@ -222,6 +256,40 @@ header {
   display: block;
 }
 
+/* ACTIVITY CARDS */
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 48px;
+}
+.activity-card {
+  background: var(--cream);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.activity-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px var(--shadow);
+}
+.activity-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+.activity-card h4 {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+.activity-card p {
+  font-size: 14px;
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
 /* NEWS */
 .news-section { background: var(--bg); }
 .news-list {
@@ -253,16 +321,260 @@ header {
   font-size: 14px;
   color: var(--text);
 }
+.news-link {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+.news-link:hover { text-decoration: underline; }
+
+/* GALLERY */
+.gallery-section { background: var(--white); }
+.gallery-years {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+.year-btn {
+  padding: 10px 24px;
+  border: 2px solid var(--primary);
+  background: transparent;
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.year-btn:hover, .year-btn.active {
+  background: var(--primary);
+  color: var(--white);
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+.gallery-item {
+  aspect-ratio: 1;
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.gallery-item:hover { transform: scale(1.05); }
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery-tab {
+  display: none;
+}
+.gallery-tab.active { display: block; }
+.gallery-title {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  color: var(--primary);
+  margin-bottom: 16px;
+  text-align: center;
+}
+.gallery-desc {
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-light);
+  margin-bottom: 24px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* NGB99 Special Section */
+.ngb-section {
+  background: linear-gradient(135deg, #fdf5e6, #fff8dc);
+}
+.ngb-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.ngb-text h3 {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+.ngb-text .subtitle {
+  font-size: 16px;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+.ngb-text p {
+  font-size: 15px;
+  color: var(--text-light);
+  line-height: 2;
+  margin-bottom: 16px;
+}
+.ngb-timeline {
+  margin-top: 24px;
+  padding-left: 24px;
+  border-left: 3px solid var(--accent);
+}
+.ngb-timeline-item {
+  margin-bottom: 16px;
+}
+.ngb-timeline-item .date {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary);
+}
+.ngb-timeline-item .event {
+  font-size: 14px;
+  color: var(--text-light);
+}
+.ngb-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+.ngb-images img {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 16px var(--shadow);
+}
+
+/* VIDEO Section */
+.video-section { background: var(--bg); }
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+.video-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 4px 16px var(--shadow);
+}
+.video-thumbnail {
+  position: relative;
+  aspect-ratio: 16/9;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.video-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+.play-btn {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 24px;
+  transition: transform 0.3s;
+}
+.video-card:hover .play-btn { transform: scale(1.1); }
+.video-info {
+  padding: 16px;
+}
+.video-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+}
+.video-date {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+/* CUSTOMER VOICE */
+.customer-section { background: var(--white); }
+.customer-intro {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.customer-intro p {
+  font-size: 16px;
+  color: var(--text-light);
+  line-height: 2;
+}
+.artwork-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 16px;
+}
+.artwork-item {
+  background: var(--cream);
+  border-radius: var(--radius);
+  overflow: hidden;
+  padding: 8px;
+  transition: transform 0.3s;
+}
+.artwork-item:hover { transform: scale(1.05); }
+.artwork-item img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+/* NDABAI SHOP Banner */
+.shop-banner {
+  background: linear-gradient(135deg, #4a3728, #2d1f16);
+  padding: 60px 24px;
+  text-align: center;
+  color: var(--white);
+}
+.shop-banner h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(24px, 4vw, 36px);
+  margin-bottom: 16px;
+}
+.shop-banner p {
+  font-size: 16px;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 24px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.shop-btn {
+  display: inline-block;
+  padding: 14px 40px;
+  background: var(--gold);
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.3s;
+}
+.shop-btn:hover {
+  background: #d4a017;
+  transform: translateY(-2px);
+}
 
 /* PROFILE */
-.profile-section { background: var(--white); }
+.profile-section { background: var(--bg); }
 .profile-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 32px;
 }
 .profile-card {
-  background: var(--cream);
+  background: var(--white);
   border-radius: var(--radius-lg);
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
@@ -355,7 +667,8 @@ header {
   margin-bottom: 6px;
 }
 .form-group input,
-.form-group textarea {
+.form-group textarea,
+.form-group select {
   width: 100%;
   padding: 12px 16px;
   border: 1px solid var(--border);
@@ -365,7 +678,8 @@ header {
   transition: border-color 0.3s;
 }
 .form-group input:focus,
-.form-group textarea:focus {
+.form-group textarea:focus,
+.form-group select:focus {
   outline: none;
   border-color: var(--primary);
 }
@@ -433,10 +747,11 @@ footer {
   .nav-links { display: none; }
   .burger { display: block; }
   .about-content { grid-template-columns: 1fr; }
-  .profile-card.featured {
-    grid-template-columns: 1fr;
-  }
+  .ngb-content { grid-template-columns: 1fr; }
+  .profile-card.featured { grid-template-columns: 1fr; }
   .contact-card { padding: 24px; }
+  .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
+  .ngb-images { grid-template-columns: 1fr; }
 }
 
 /* ══════════════════════════════════════
@@ -450,6 +765,33 @@ footer {
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  z-index: 300;
+  align-items: center;
+  justify-content: center;
+}
+.lightbox.active { display: flex; }
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: var(--radius);
+}
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 40px;
+  cursor: pointer;
 }
 </style>
 </head>
@@ -465,14 +807,34 @@ footer {
     <ul class="nav-links">
       <li><a href="#about">活動内容</a></li>
       <li><a href="#news">お知らせ</a></li>
+      <li><a href="#gallery">ギャラリー</a></li>
+      <li><a href="#ngb99">NGB99</a></li>
+      <li><a href="#video">動画</a></li>
+      <li><a href="#customer">お客様の声</a></li>
       <li><a href="#profile">プロフィール</a></li>
       <li><a href="#contact">お問い合わせ</a></li>
     </ul>
-    <button class="burger">
+    <button class="burger" onclick="toggleMobileMenu()">
       <span></span><span></span><span></span>
     </button>
   </div>
 </header>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" onclick="toggleMobileMenu()">&times;</button>
+  <ul>
+    <li><a href="#about" onclick="toggleMobileMenu()">活動内容</a></li>
+    <li><a href="#news" onclick="toggleMobileMenu()">お知らせ</a></li>
+    <li><a href="#gallery" onclick="toggleMobileMenu()">ギャラリー</a></li>
+    <li><a href="#ngb99" onclick="toggleMobileMenu()">NGB99</a></li>
+    <li><a href="#video" onclick="toggleMobileMenu()">動画</a></li>
+    <li><a href="#customer" onclick="toggleMobileMenu()">お客様の声</a></li>
+    <li><a href="#profile" onclick="toggleMobileMenu()">プロフィール</a></li>
+    <li><a href="#contact" onclick="toggleMobileMenu()">お問い合わせ</a></li>
+    <li><a href="https://ndanda.base.shop/" target="_blank">nda焙 SHOP</a></li>
+  </ul>
+</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -485,6 +847,12 @@ footer {
     </div>
     <div class="hero-slide">
       <img src="images/mainImg13.jpg" alt="コンサートの様子">
+    </div>
+    <div class="hero-slide">
+      <img src="images/eyecatch5.jpg" alt="コンサートの様子">
+    </div>
+    <div class="hero-slide">
+      <img src="images/eyecatch6.jpg" alt="コンサートの様子">
     </div>
   </div>
   <div class="hero-overlay">
@@ -501,7 +869,7 @@ footer {
 <section class="section about-section" id="about">
   <div class="section-inner">
     <div class="section-header fade-in">
-      <p class="section-title-en">About</p>
+      <p class="section-title-en">Activities</p>
       <h2 class="section-title">活動内容</h2>
     </div>
 
@@ -521,7 +889,30 @@ footer {
         </p>
       </div>
       <div class="about-image">
-        <img src="images/mainImg15.jpg" alt="コンサートの様子">
+        <img src="images/image1.jpeg" alt="コンサートの様子">
+      </div>
+    </div>
+
+    <div class="activity-grid fade-in">
+      <div class="activity-card">
+        <div class="activity-icon">🎵</div>
+        <h4>学校・施設でのコンサート</h4>
+        <p>幼稚園から高校まで、また老人ホームなど福祉施設で年間50回以上のコンサートを実施しています。</p>
+      </div>
+      <div class="activity-card">
+        <div class="activity-icon">🎤</div>
+        <h4>奇跡のレッスン</h4>
+        <p>公益社団法人東日本大震災復興財団の支援による声楽指導プログラム。才能ある若い歌手の発掘を行っています。</p>
+      </div>
+      <div class="activity-card">
+        <div class="activity-icon">🌍</div>
+        <h4>国際交流</h4>
+        <p>ベラルーシの子どもたちとの文化交流プログラム。2014年・2015年に福島の子どもたちを引率しました。</p>
+      </div>
+      <div class="activity-card">
+        <div class="activity-icon">📰</div>
+        <h4>メディア出演</h4>
+        <p>JFN全国38局放送「サードプレイス」出演など、活動がメディアでも取り上げられています。</p>
       </div>
     </div>
   </div>
@@ -537,26 +928,490 @@ footer {
 
     <div class="news-list fade-in">
       <div class="news-item">
-        <span class="news-date">2024/7/30</span>
+        <span class="news-date">2024/5/17</span>
         <p class="news-content">
-          全国金賞受賞の橘小学校の児童と一流奏者5名によるコラボレーションコンサートが実現。
-          県主催のプレゼントコンサート。3000Hzの世界でリラクゼーション体験を提供。
+          お米と発酵café&shop <a href="https://ndanda.base.shop/" target="_blank" class="news-link">「nda焙」ネット販売開始</a>
         </p>
       </div>
       <div class="news-item">
         <span class="news-date">2024/5/17</span>
-        <p class="news-content">お米と発酵café&shop「nda焙」ネット販売開始</p>
+        <p class="news-content">ウェブサイトを更新しました</p>
+      </div>
+      <div class="news-item">
+        <span class="news-date">2021/4</span>
+        <p class="news-content">
+          18ヶ月ぶりに学校での声楽指導を再開。2022年2月まで郡山市内40会場で実施。
+          コロナ禍でのマスク生活により、子どもたちの呼吸が浅くなり、声が出にくくなっている状況を確認。
+        </p>
+      </div>
+      <div class="news-item">
+        <span class="news-date">2019/3</span>
+        <p class="news-content">
+          福魂祭で300名の子どもたちとコラボレーション演奏を実現。2ヶ月間一生懸命練習し、素晴らしい合唱となりました。
+        </p>
       </div>
       <div class="news-item">
         <span class="news-date">2017/1/27</span>
         <p class="news-content">ギャラリー2017にNGB99物語を掲載</p>
       </div>
       <div class="news-item">
+        <span class="news-date">2017/1/8</span>
+        <p class="news-content">NGB99が郡山市成人式（3,000名参加）でパフォーマンスを披露。福島県内3局のテレビ、新聞で報道。</p>
+      </div>
+      <div class="news-item">
         <span class="news-date">2016/12/28</span>
-        <p class="news-content">ギャラリー2016を更新</p>
+        <p class="news-content">0歳・1歳児向け親子クリスマスコンサートを開催</p>
+      </div>
+      <div class="news-item">
+        <span class="news-date">2016/11</span>
+        <p class="news-content">NGB99デビュー</p>
+      </div>
+      <div class="news-item">
+        <span class="news-date">2015/8</span>
+        <p class="news-content">福島の子どもたち16名をベラルーシに引率。現地でコンサートと文化交流を実施。</p>
+      </div>
+      <div class="news-item">
+        <span class="news-date">2014/12</span>
+        <p class="news-content">JFN「サードプレイス」（全国38局）にラジオ出演</p>
       </div>
     </div>
   </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section gallery-section" id="gallery">
+  <div class="section-inner">
+    <div class="section-header fade-in">
+      <p class="section-title-en">Gallery</p>
+      <h2 class="section-title">ギャラリー</h2>
+      <p class="section-desc">2013年から現在までの活動記録をご覧いただけます。</p>
+    </div>
+
+    <div class="gallery-years fade-in">
+      <button class="year-btn active" onclick="showGallery('2021')">2021</button>
+      <button class="year-btn" onclick="showGallery('2019')">2019</button>
+      <button class="year-btn" onclick="showGallery('2017')">2017</button>
+      <button class="year-btn" onclick="showGallery('2016')">2016</button>
+      <button class="year-btn" onclick="showGallery('2015')">2015</button>
+      <button class="year-btn" onclick="showGallery('2014')">2014</button>
+      <button class="year-btn" onclick="showGallery('2013')">2013</button>
+    </div>
+
+    <!-- 2021 Gallery -->
+    <div class="gallery-tab active" id="gallery-2021">
+      <h3 class="gallery-title">2021年 活動記録</h3>
+      <p class="gallery-desc">
+        18ヶ月ぶりに学校での声楽指導を再開。2022年2月までに郡山市内40会場で実施。
+        コロナ禍でのマスク生活により、子どもたちの呼吸が浅くなっている状況を確認しました。
+      </p>
+      <div class="gallery-grid">
+        <div class="gallery-item" onclick="openLightbox('images/20161210.jpg')">
+          <img src="images/20161210.jpg" alt="活動の様子" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/sample.jpg')">
+          <img src="images/sample.jpg" alt="活動の様子" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <!-- 2019 Gallery -->
+    <div class="gallery-tab" id="gallery-2019">
+      <h3 class="gallery-title">2019年 福魂祭・奇跡のレッスン</h3>
+      <p class="gallery-desc">
+        福魂祭で300名の子どもたちとコラボレーション演奏を実現。
+        復興財団支援による声楽指導プログラム「奇跡のレッスン」も継続。
+      </p>
+      <div class="gallery-grid">
+        <div class="gallery-item" onclick="openLightbox('images/gallery2019/2019-20s.jpg')">
+          <img src="images/gallery2019/2019-20s.jpg" alt="福魂祭" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2019/2019-21s.jpg')">
+          <img src="images/gallery2019/2019-21s.jpg" alt="福魂祭" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2019/2019-22s.jpg')">
+          <img src="images/gallery2019/2019-22s.jpg" alt="コンサート" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2019/2019-23s.jpg')">
+          <img src="images/gallery2019/2019-23s.jpg" alt="コンサート" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2019/2019-24s.jpg')">
+          <img src="images/gallery2019/2019-24s.jpg" alt="コンサート" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2019/2019-25s.jpg')">
+          <img src="images/gallery2019/2019-25s.jpg" alt="コンサート" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2019/2019-26s.jpg')">
+          <img src="images/gallery2019/2019-26s.jpg" alt="レッスン" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2019/2019-27s.jpg')">
+          <img src="images/gallery2019/2019-27s.jpg" alt="レッスン" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2019/2019-28s.jpg')">
+          <img src="images/gallery2019/2019-28s.jpg" alt="コンサート" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2019/2019-29s.jpg')">
+          <img src="images/gallery2019/2019-29s.jpg" alt="コンサート" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2019/2019-30s.jpg')">
+          <img src="images/gallery2019/2019-30s.jpg" alt="コンサート" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2019/2019-31s.jpg')">
+          <img src="images/gallery2019/2019-31s.jpg" alt="コンサート" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <!-- 2017 Gallery (NGB99) -->
+    <div class="gallery-tab" id="gallery-2017">
+      <h3 class="gallery-title">2017年 NGB99物語</h3>
+      <p class="gallery-desc">
+        西田町のおばあちゃんたちによるアイドルグループ「NGB99」が誕生。
+        2017年1月8日、郡山市成人式（3,000名参加）でパフォーマンスを披露しました。
+      </p>
+      <div class="gallery-grid">
+        <div class="gallery-item" onclick="openLightbox('images/gallery2017/image1s.jpg')">
+          <img src="images/gallery2017/image1s.jpg" alt="NGB99" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2017/image2s.jpg')">
+          <img src="images/gallery2017/image2s.jpg" alt="NGB99" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2017/image3s.jpg')">
+          <img src="images/gallery2017/image3s.jpg" alt="NGB99" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2017/image4s.jpg')">
+          <img src="images/gallery2017/image4s.jpg" alt="NGB99" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2017/image5s.jpg')">
+          <img src="images/gallery2017/image5s.jpg" alt="NGB99" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2017/image6s.jpg')">
+          <img src="images/gallery2017/image6s.jpg" alt="NGB99" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2017/image7s.jpg')">
+          <img src="images/gallery2017/image7s.jpg" alt="成人式" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2017/image8s.jpg')">
+          <img src="images/gallery2017/image8s.jpg" alt="成人式" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2017/image9s.jpg')">
+          <img src="images/gallery2017/image9s.jpg" alt="成人式" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2017/image10s.jpg')">
+          <img src="images/gallery2017/image10s.jpg" alt="成人式" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2017/image11s.jpg')">
+          <img src="images/gallery2017/image11s.jpg" alt="NGB99" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2017/image12s.jpg')">
+          <img src="images/gallery2017/image12s.jpg" alt="NGB99" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <!-- 2016 Gallery -->
+    <div class="gallery-tab" id="gallery-2016">
+      <h3 class="gallery-title">2016年 活動記録</h3>
+      <p class="gallery-desc">
+        0歳・1歳児向け親子クリスマスコンサート開催。本宮市復興祭でのコラボレーション。
+        奈良ホテルでのディナーコンサートでは福島県食材を使用。
+      </p>
+      <div class="gallery-grid">
+        <div class="gallery-item" onclick="openLightbox('images/gallery2016/1s.jpg')">
+          <img src="images/gallery2016/1s.jpg" alt="クリスマスコンサート" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2016/2s.jpg')">
+          <img src="images/gallery2016/2s.jpg" alt="クリスマスコンサート" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2016/3s.jpg')">
+          <img src="images/gallery2016/3s.jpg" alt="コンサート" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2016/4s.jpg')">
+          <img src="images/gallery2016/4s.jpg" alt="コンサート" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2016/1s.gif')">
+          <img src="images/gallery2016/1s.gif" alt="復興祭" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2016/2s.gif')">
+          <img src="images/gallery2016/2s.gif" alt="復興祭" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2016/3s.gif')">
+          <img src="images/gallery2016/3s.gif" alt="復興祭" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2016/4s.gif')">
+          <img src="images/gallery2016/4s.gif" alt="復興祭" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2016/5s.gif')">
+          <img src="images/gallery2016/5s.gif" alt="コンサート" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2016/6s.gif')">
+          <img src="images/gallery2016/6s.gif" alt="コンサート" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2016/7s.gif')">
+          <img src="images/gallery2016/7s.gif" alt="コンサート" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2016/8s.gif')">
+          <img src="images/gallery2016/8s.gif" alt="コンサート" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <!-- 2015 Gallery -->
+    <div class="gallery-tab" id="gallery-2015">
+      <h3 class="gallery-title">2015年 ベラルーシ交流・国内活動</h3>
+      <p class="gallery-desc">
+        7月31日～8月10日、福島の子どもたち16名をベラルーシに引率。
+        現地でコンサートと文化交流を実施。国内でも多数の学校・施設で公演。
+      </p>
+      <div class="gallery-grid">
+        <div class="gallery-item" onclick="openLightbox('images/gallery2015/201506-1.jpg')">
+          <img src="images/gallery2015/201506-1.jpg" alt="ベラルーシ交流" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2015/201506-2.jpg')">
+          <img src="images/gallery2015/201506-2.jpg" alt="ベラルーシ交流" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2015/201510-1.jpg')">
+          <img src="images/gallery2015/201510-1.jpg" alt="コンサート" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2015/201510-2.jpg')">
+          <img src="images/gallery2015/201510-2.jpg" alt="コンサート" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2015/201510-5.jpg')">
+          <img src="images/gallery2015/201510-5.jpg" alt="コンサート" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2015/201510-6.jpg')">
+          <img src="images/gallery2015/201510-6.jpg" alt="コンサート" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2015/201510-7.jpg')">
+          <img src="images/gallery2015/201510-7.jpg" alt="コンサート" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2015/201510-8.jpg')">
+          <img src="images/gallery2015/201510-8.jpg" alt="コンサート" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2015/201510-9.jpg')">
+          <img src="images/gallery2015/201510-9.jpg" alt="コンサート" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2015/201510-10.jpg')">
+          <img src="images/gallery2015/201510-10.jpg" alt="コンサート" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <!-- 2014 Gallery -->
+    <div class="gallery-tab" id="gallery-2014">
+      <h3 class="gallery-title">2014年 ベラルーシ交流・秋のコンサート</h3>
+      <p class="gallery-desc">
+        8月にベラルーシへ子どもたち16名を引率。国内テレビ出演。
+        秋には50校の学校訪問コンサートを実施。
+      </p>
+      <div class="gallery-grid">
+        <div class="gallery-item" onclick="openLightbox('images/gallery2014/20140822-1.jpg')">
+          <img src="images/gallery2014/20140822-1.jpg" alt="ベラルーシ" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2014/20140822-2.jpg')">
+          <img src="images/gallery2014/20140822-2.jpg" alt="ベラルーシ" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2014/20140822-3.jpg')">
+          <img src="images/gallery2014/20140822-3.jpg" alt="ベラルーシ" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2014/20140822-4.jpg')">
+          <img src="images/gallery2014/20140822-4.jpg" alt="ベラルーシ" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2014/20140822-5.jpg')">
+          <img src="images/gallery2014/20140822-5.jpg" alt="ベラルーシ" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2014/20140725-1.jpg')">
+          <img src="images/gallery2014/20140725-1.jpg" alt="コンサート" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2014/20140725-2.jpg')">
+          <img src="images/gallery2014/20140725-2.jpg" alt="コンサート" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2014/20140725-3.jpg')">
+          <img src="images/gallery2014/20140725-3.jpg" alt="コンサート" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2014/20140626-1.jpg')">
+          <img src="images/gallery2014/20140626-1.jpg" alt="学校訪問" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2014/20140626-2.jpg')">
+          <img src="images/gallery2014/20140626-2.jpg" alt="学校訪問" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2014/20140626-3.jpg')">
+          <img src="images/gallery2014/20140626-3.jpg" alt="学校訪問" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2014/20140626-4.jpg')">
+          <img src="images/gallery2014/20140626-4.jpg" alt="学校訪問" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <!-- 2013 Gallery -->
+    <div class="gallery-tab" id="gallery-2013">
+      <h3 class="gallery-title">2013年 活動開始</h3>
+      <p class="gallery-desc">
+        震災後2年、本格的な活動を開始。台湾でのコンサート、仙台での公演なども実施。
+      </p>
+      <div class="gallery-grid">
+        <div class="gallery-item" onclick="openLightbox('images/gallery2013/20131015-1.jpg')">
+          <img src="images/gallery2013/20131015-1.jpg" alt="コンサート" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2013/20131015-2.jpg')">
+          <img src="images/gallery2013/20131015-2.jpg" alt="コンサート" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2013/20131011-1.jpg')">
+          <img src="images/gallery2013/20131011-1.jpg" alt="コンサート" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2013/20131011-2.jpg')">
+          <img src="images/gallery2013/20131011-2.jpg" alt="コンサート" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2013/20131011-3.jpg')">
+          <img src="images/gallery2013/20131011-3.jpg" alt="コンサート" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/gallery2013/20131011-4.jpg')">
+          <img src="images/gallery2013/20131011-4.jpg" alt="コンサート" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NGB99 SECTION -->
+<section class="section ngb-section" id="ngb99">
+  <div class="section-inner">
+    <div class="section-header fade-in">
+      <p class="section-title-en">Special Project</p>
+      <h2 class="section-title">NGB99物語</h2>
+      <p class="section-desc">天国にいちばん近いアイドル</p>
+    </div>
+
+    <div class="ngb-content fade-in">
+      <div class="ngb-text">
+        <h3>NGB99</h3>
+        <p class="subtitle">西田町のおばあちゃんアイドルグループ</p>
+        <p>
+          2016年1月、沖縄県小浜島を訪問した際に出会った84歳のアイドル・知念さんとの出会いがきっかけでした。
+          「西田町にもおばあちゃんアイドルを作ろう」という思いから、NGB99が誕生しました。
+        </p>
+        <p>
+          作曲は東京在住の対馬敏夫氏、振り付け・マナー指導は須賀川市の前崎順子先生。
+          2016年11月にデビューし、2017年1月8日には郡山市成人式（3,000名参加）でパフォーマンスを披露。
+          福島県内3局のテレビと新聞で報道されました。
+        </p>
+
+        <div class="ngb-timeline">
+          <div class="ngb-timeline-item">
+            <span class="date">2016年1月</span>
+            <p class="event">沖縄県小浜島訪問、知念さんとの出会い</p>
+          </div>
+          <div class="ngb-timeline-item">
+            <span class="date">2016年3月</span>
+            <p class="event">対馬敏夫氏に作曲依頼</p>
+          </div>
+          <div class="ngb-timeline-item">
+            <span class="date">2016年7月</span>
+            <p class="event">デビュー曲完成</p>
+          </div>
+          <div class="ngb-timeline-item">
+            <span class="date">2016年8月</span>
+            <p class="event">歌詞完成（5日間で執筆）</p>
+          </div>
+          <div class="ngb-timeline-item">
+            <span class="date">2016年11月</span>
+            <p class="event">NGB99デビュー</p>
+          </div>
+          <div class="ngb-timeline-item">
+            <span class="date">2017年1月8日</span>
+            <p class="event">郡山市成人式で披露（3,000名参加）</p>
+          </div>
+        </div>
+      </div>
+      <div class="ngb-images">
+        <img src="images/gallery2017/image3s.jpg" alt="NGB99" loading="lazy">
+        <img src="images/gallery2017/image5s.jpg" alt="NGB99" loading="lazy">
+        <img src="images/gallery2017/image7s.jpg" alt="成人式" loading="lazy">
+        <img src="images/gallery2017/image11s.jpg" alt="NGB99" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO -->
+<section class="section video-section" id="video">
+  <div class="section-inner">
+    <div class="section-header fade-in">
+      <p class="section-title-en">Video</p>
+      <h2 class="section-title">動画</h2>
+      <p class="section-desc">コンサートやイベントの様子を動画でご覧いただけます。</p>
+    </div>
+
+    <div class="video-grid fade-in">
+      <a href="https://www.dailymotion.com/video/musicmori_20141212" target="_blank" class="video-card">
+        <div class="video-thumbnail">
+          <img src="images/radio1212.jpg" alt="ラジオ出演" loading="lazy">
+          <div class="play-btn">▶</div>
+        </div>
+        <div class="video-info">
+          <p class="video-title">JFNラジオ「サードプレイス」出演</p>
+          <p class="video-date">2014年12月12日</p>
+        </div>
+      </a>
+      <a href="https://www.dailymotion.com/video/musicmori_20140310" target="_blank" class="video-card">
+        <div class="video-thumbnail">
+          <img src="images/mainImg14.jpg" alt="コンサート" loading="lazy">
+          <div class="play-btn">▶</div>
+        </div>
+        <div class="video-info">
+          <p class="video-title">ギフトコンサート 2014年3月</p>
+          <p class="video-date">2014年3月10日</p>
+        </div>
+      </a>
+      <a href="https://www.dailymotion.com/video/musicmori_2855" target="_blank" class="video-card">
+        <div class="video-thumbnail">
+          <img src="images/mainImg15.jpg" alt="コンサート" loading="lazy">
+          <div class="play-btn">▶</div>
+        </div>
+        <div class="video-info">
+          <p class="video-title">学校コンサート</p>
+          <p class="video-date">活動記録</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CUSTOMER VOICE -->
+<section class="section customer-section" id="customer">
+  <div class="section-inner">
+    <div class="section-header fade-in">
+      <p class="section-title-en">Customer Voice</p>
+      <h2 class="section-title">お客様の声</h2>
+    </div>
+
+    <div class="customer-intro fade-in">
+      <p>
+        震災後、3年間で250施設で音楽鑑賞会を実施し、<br>
+        約30,000人の子どもたちからお手紙やイラストをいただきました。<br>
+        子どもたちの想いが詰まった作品の一部をご紹介します。
+      </p>
+    </div>
+
+    <div class="artwork-grid fade-in">
+      <div class="artwork-item">
+        <img src="images/art/Image-1.gif" alt="子どもの絵" loading="lazy">
+      </div>
+      <div class="artwork-item">
+        <img src="images/art/Image-2.gif" alt="子どもの絵" loading="lazy">
+      </div>
+      <div class="artwork-item">
+        <img src="images/art/Image-3.gif" alt="子どもの絵" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NDABAI SHOP BANNER -->
+<section class="shop-banner">
+  <h2>nda焙</h2>
+  <p>お米と発酵café&shop<br>オンラインショップがオープンしました</p>
+  <a href="https://ndanda.base.shop/" target="_blank" class="shop-btn">SHOP を見る</a>
 </section>
 
 <!-- PROFILE -->
@@ -664,11 +1519,20 @@ footer {
         </div>
         <div class="contact-row">
           <span class="contact-label">所在地</span>
-          <span class="contact-value">福島県郡山市西田町三町目吉田252</span>
+          <span class="contact-value">〒963-0531<br>福島県郡山市西田町三町目吉田252</span>
         </div>
       </div>
 
       <form class="contact-form" onsubmit="return false">
+        <div class="form-group">
+          <label>お問い合わせ種別</label>
+          <select>
+            <option value="">選択してください</option>
+            <option value="concert">コンサートのご依頼</option>
+            <option value="sponsor">協賛について</option>
+            <option value="other">その他のお問い合わせ</option>
+          </select>
+        </div>
         <div class="form-group">
           <label>お名前</label>
           <input type="text" placeholder="山田 太郎">
@@ -676,6 +1540,10 @@ footer {
         <div class="form-group">
           <label>メールアドレス</label>
           <input type="email" placeholder="example@mail.com">
+        </div>
+        <div class="form-group">
+          <label>電話番号</label>
+          <input type="tel" placeholder="000-0000-0000">
         </div>
         <div class="form-group">
           <label>お問い合わせ内容</label>
@@ -695,11 +1563,22 @@ footer {
   <div class="footer-links">
     <a href="#about">活動内容</a>
     <a href="#news">お知らせ</a>
+    <a href="#gallery">ギャラリー</a>
+    <a href="#ngb99">NGB99</a>
+    <a href="#video">動画</a>
+    <a href="#customer">お客様の声</a>
     <a href="#profile">プロフィール</a>
     <a href="#contact">お問い合わせ</a>
+    <a href="https://ndanda.base.shop/" target="_blank">nda焙 SHOP</a>
   </div>
-  <p class="footer-copy">© 2016 おんがくの杜 All rights Reserved.</p>
+  <p class="footer-copy">&copy; 2016 おんがくの杜 All rights Reserved.</p>
 </footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close">&times;</button>
+  <img src="" alt="拡大表示" id="lightbox-img">
+</div>
 
 <script>
 // Hero Slider
@@ -722,6 +1601,31 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1 });
 fadeElements.forEach(el => observer.observe(el));
+
+// Mobile Menu
+function toggleMobileMenu() {
+  document.getElementById('mobileMenu').classList.toggle('active');
+}
+
+// Gallery Tabs
+function showGallery(year) {
+  // Remove active from all tabs and buttons
+  document.querySelectorAll('.gallery-tab').forEach(tab => tab.classList.remove('active'));
+  document.querySelectorAll('.year-btn').forEach(btn => btn.classList.remove('active'));
+
+  // Add active to selected
+  document.getElementById('gallery-' + year).classList.add('active');
+  event.target.classList.add('active');
+}
+
+// Lightbox
+function openLightbox(src) {
+  document.getElementById('lightbox-img').src = src;
+  document.getElementById('lightbox').classList.add('active');
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('active');
+}
 </script>
 </body>
 </html>
