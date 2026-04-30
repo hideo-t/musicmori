@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>おんがくの杜 | 魂に響くギフトコンサートの会</title>
+<meta name="description" content="一般社団法人おんがくの杜 魂に響くギフトコンサートの会。福島県郡山市を拠点に、音楽の力で震災復興の街づくり・人づくりを目指しています。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #8b4513;
+  --primary-light: #a0522d;
+  --primary-dark: #5d2e0d;
+  --accent: #d4a574;
+  --accent-light: #e8c9a8;
+  --gold: #b8860b;
+  --white: #ffffff;
+  --cream: #faf8f5;
+  --bg: #f5f3f0;
+  --text: #3a3a3a;
+  --text-light: #5a5a5a;
+  --text-muted: #8a8a8a;
+  --border: #e0dcd5;
+  --shadow: rgba(139, 69, 19, 0.1);
+  --font-sans: "Noto Sans JP", sans-serif;
+  --font-serif: "Noto Serif JP", serif;
+  --radius: 8px;
+  --radius-lg: 16px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-sans);
+  color: var(--text);
+  background: var(--cream);
+  line-height: 1.8;
+}
+
+/* ══════════════════════════════════════
+   HEADER
+   ══════════════════════════════════════ */
+header {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+.logo img {
+  height: 50px;
+}
+.logo-text {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+.nav-links a {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-light);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.nav-links a:hover { color: var(--primary); }
+
+.burger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+.burger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--primary);
+  margin: 5px 0;
+}
+
+/* ══════════════════════════════════════
+   HERO
+   ══════════════════════════════════════ */
+.hero {
+  position: relative;
+  height: 70vh;
+  min-height: 500px;
+  overflow: hidden;
+}
+.hero-slider {
+  position: absolute;
+  inset: 0;
+}
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+.hero-slide.active { opacity: 1; }
+.hero-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+    rgba(0,0,0,0.2) 0%,
+    rgba(0,0,0,0.4) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+}
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(28px, 5vw, 42px);
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 16px;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+}
+.hero-sub {
+  font-size: clamp(14px, 2vw, 18px);
+  color: var(--white);
+  max-width: 700px;
+  line-height: 2;
+  text-shadow: 0 1px 10px rgba(0,0,0,0.5);
+}
+
+/* ══════════════════════════════════════
+   SECTION
+   ══════════════════════════════════════ */
+.section {
+  padding: 80px 24px;
+}
+.section-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.section-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.section-title {
+  font-family: var(--font-serif);
+  font-size: clamp(24px, 4vw, 32px);
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+.section-title-en {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.section-desc {
+  font-size: 15px;
+  color: var(--text-light);
+  max-width: 600px;
+  margin: 16px auto 0;
+  line-height: 2;
+}
+
+/* ABOUT */
+.about-section { background: var(--white); }
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.about-text h3 {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  color: var(--primary);
+  margin-bottom: 16px;
+}
+.about-text p {
+  font-size: 15px;
+  color: var(--text-light);
+  line-height: 2;
+  margin-bottom: 16px;
+}
+.about-image {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 8px 32px var(--shadow);
+}
+.about-image img {
+  width: 100%;
+  display: block;
+}
+
+/* NEWS */
+.news-section { background: var(--bg); }
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.news-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px;
+  background: var(--white);
+  border-radius: var(--radius);
+  border-left: 4px solid var(--accent);
+  transition: box-shadow 0.3s;
+}
+.news-item:hover {
+  box-shadow: 0 4px 16px var(--shadow);
+}
+.news-date {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary);
+  min-width: 100px;
+}
+.news-content {
+  flex: 1;
+  font-size: 14px;
+  color: var(--text);
+}
+
+/* PROFILE */
+.profile-section { background: var(--white); }
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+}
+.profile-card {
+  background: var(--cream);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.profile-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px var(--shadow);
+}
+.profile-card.featured {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  background: linear-gradient(135deg, var(--accent-light), var(--cream));
+}
+.profile-img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+.profile-card.featured .profile-img {
+  aspect-ratio: auto;
+  height: 100%;
+}
+.profile-body {
+  padding: 24px;
+}
+.profile-role {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+}
+.profile-name {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+.profile-bio {
+  font-size: 13px;
+  color: var(--text-light);
+  line-height: 1.9;
+}
+
+/* CONTACT */
+.contact-section {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: var(--white);
+}
+.contact-section .section-title { color: var(--white); }
+.contact-section .section-desc { color: rgba(255,255,255,0.8); }
+.contact-card {
+  max-width: 600px;
+  margin: 0 auto;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  color: var(--text);
+}
+.contact-info {
+  display: grid;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.contact-row {
+  display: flex;
+  gap: 16px;
+}
+.contact-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary);
+  min-width: 80px;
+}
+.contact-value {
+  font-size: 14px;
+  color: var(--text);
+}
+.contact-form {
+  display: grid;
+  gap: 16px;
+}
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-light);
+  margin-bottom: 6px;
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-family: var(--font-sans);
+  transition: border-color 0.3s;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+.form-group textarea { resize: vertical; min-height: 120px; }
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.submit-btn:hover { background: var(--primary-dark); }
+
+/* ══════════════════════════════════════
+   FOOTER
+   ══════════════════════════════════════ */
+footer {
+  background: var(--primary-dark);
+  color: rgba(255,255,255,0.8);
+  padding: 48px 24px;
+  text-align: center;
+}
+.footer-logo {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+.footer-org {
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 16px;
+}
+.footer-address {
+  font-size: 13px;
+  margin-bottom: 24px;
+}
+.footer-links {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+.footer-links a {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  font-size: 13px;
+}
+.footer-links a:hover { color: var(--white); }
+.footer-copy {
+  font-size: 11px;
+  color: rgba(255,255,255,0.5);
+}
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+   ══════════════════════════════════════ */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .burger { display: block; }
+  .about-content { grid-template-columns: 1fr; }
+  .profile-card.featured {
+    grid-template-columns: 1fr;
+  }
+  .contact-card { padding: 24px; }
+}
+
+/* ══════════════════════════════════════
+   ANIMATION
+   ══════════════════════════════════════ */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s, transform 0.6s;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <img src="images/logo.png" alt="おんがくの杜">
+      <span class="logo-text">おんがくの杜</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">活動内容</a></li>
+      <li><a href="#news">お知らせ</a></li>
+      <li><a href="#profile">プロフィール</a></li>
+      <li><a href="#contact">お問い合わせ</a></li>
+    </ul>
+    <button class="burger">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-slider">
+    <div class="hero-slide active">
+      <img src="images/mainImg15.jpg" alt="コンサートの様子">
+    </div>
+    <div class="hero-slide">
+      <img src="images/mainImg14.jpg" alt="コンサートの様子">
+    </div>
+    <div class="hero-slide">
+      <img src="images/mainImg13.jpg" alt="コンサートの様子">
+    </div>
+  </div>
+  <div class="hero-overlay">
+    <h1 class="hero-title">魂に響くギフトコンサート</h1>
+    <p class="hero-sub">
+      魂に響くおんがくの力で、子ども達からお年寄りまでを対象に<br>
+      震災後疲弊した心や精神に安らぎを与えるとともに、<br>
+      『うつくしまふくしま』の名にふさわしい本物のまちづくり、人づくりを目指しております。
+    </p>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section about-section" id="about">
+  <div class="section-inner">
+    <div class="section-header fade-in">
+      <p class="section-title-en">About</p>
+      <h2 class="section-title">活動内容</h2>
+    </div>
+
+    <div class="about-content fade-in">
+      <div class="about-text">
+        <h3>『魂に響くギフトコンサート』のご紹介</h3>
+        <p>
+          本事業は、心に響く音楽を通じて震災復興の街づくり・人づくりを目指します。
+        </p>
+        <p>
+          年齢層を考慮した選曲（教科書掲載曲や童謡を含む）で、参加者全員が楽しめるコンサートを実施。
+          4月～12月に県内全域および県外の教育機関・福祉施設での公演を予定しています。
+        </p>
+        <p>
+          震災後、3年間で250施設（幼稚園、保育所、小中学校、養護学校、老人ホーム等）で音楽鑑賞会を実施。
+          約30,000人の子どもたちからお手紙をいただきました。
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="images/mainImg15.jpg" alt="コンサートの様子">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWS -->
+<section class="section news-section" id="news">
+  <div class="section-inner">
+    <div class="section-header fade-in">
+      <p class="section-title-en">News</p>
+      <h2 class="section-title">お知らせ</h2>
+    </div>
+
+    <div class="news-list fade-in">
+      <div class="news-item">
+        <span class="news-date">2024/7/30</span>
+        <p class="news-content">
+          全国金賞受賞の橘小学校の児童と一流奏者5名によるコラボレーションコンサートが実現。
+          県主催のプレゼントコンサート。3000Hzの世界でリラクゼーション体験を提供。
+        </p>
+      </div>
+      <div class="news-item">
+        <span class="news-date">2024/5/17</span>
+        <p class="news-content">お米と発酵café&shop「nda焙」ネット販売開始</p>
+      </div>
+      <div class="news-item">
+        <span class="news-date">2017/1/27</span>
+        <p class="news-content">ギャラリー2017にNGB99物語を掲載</p>
+      </div>
+      <div class="news-item">
+        <span class="news-date">2016/12/28</span>
+        <p class="news-content">ギャラリー2016を更新</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROFILE -->
+<section class="section profile-section" id="profile">
+  <div class="section-inner">
+    <div class="section-header fade-in">
+      <p class="section-title-en">Profile</p>
+      <h2 class="section-title">プロフィール</h2>
+      <p class="section-desc">おんがくの杜を支えるメンバーをご紹介します。</p>
+    </div>
+
+    <div class="profile-grid fade-in">
+      <!-- 代表 -->
+      <div class="profile-card featured">
+        <img src="images/profile.gif" alt="橋本妙子" class="profile-img">
+        <div class="profile-body">
+          <p class="profile-role">代表</p>
+          <h3 class="profile-name">橋本 妙子</h3>
+          <p class="profile-bio">
+            震災後、3年間で250施設（幼稚園、保育所、小中学校、養護学校、老人ホーム等）で音楽鑑賞会を実施。
+            約30,000人の子どもたちからの手紙60通を基に、詩人・和合亮一氏と共に詩を作成。
+            作曲はYUKIYOSHI氏が担当。
+            音楽の力を通じて、震災後の心身の疲弊に対する癒しを提供し、
+            「うつくしまふくしま」にふさわしいまちづくりと人づくりを目指しています。
+          </p>
+        </div>
+      </div>
+
+      <!-- 白井英治 -->
+      <div class="profile-card">
+        <img src="images/shirai.jpg" alt="白井英治" class="profile-img">
+        <div class="profile-body">
+          <p class="profile-role">ヴァイオリン</p>
+          <h3 class="profile-name">白井 英治</h3>
+          <p class="profile-bio">
+            東京藝術大学卒業。読売交響楽団勤務経歴あり。
+            現職は東邦音楽大学・同短期大学准教授。
+            小田原ジュニア弦楽合奏団団長。小田原音楽連盟会長。
+          </p>
+        </div>
+      </div>
+
+      <!-- 星美南子 -->
+      <div class="profile-card">
+        <img src="images/hoshi.jpg" alt="星美南子" class="profile-img">
+        <div class="profile-body">
+          <p class="profile-role">ピアノ</p>
+          <h3 class="profile-name">星 美南子</h3>
+          <p class="profile-bio">
+            武蔵野音楽大学卒業。福井直秋記念奨学金受賞。
+            ピティナ・ピアノコンペティション全国決勝大会出場。
+            ドイツハンブルク国際音楽講習会参加。大学卒業後ドイツで研鑽。
+          </p>
+        </div>
+      </div>
+
+      <!-- ANKH -->
+      <div class="profile-card">
+        <img src="images/ANKH.jpg" alt="ANKH" class="profile-img">
+        <div class="profile-body">
+          <p class="profile-role">バンド</p>
+          <h3 class="profile-name">ANKH（アンク）</h3>
+          <p class="profile-bio">
+            全員が学校教職員。15年前の児童謝恩会で結成。週1回練習活動を継続。
+            メンバー：大塚久（Vo&Gt）、丹内庄元（Gt）、小松健二（Ba）、熊田勝市（Dr）、伊藤春奈（Key）
+          </p>
+        </div>
+      </div>
+
+      <!-- 遊佐透 -->
+      <div class="profile-card">
+        <img src="images/yusa.jpg" alt="遊佐透" class="profile-img">
+        <div class="profile-body">
+          <p class="profile-role">音響</p>
+          <h3 class="profile-name">遊佐 透</h3>
+          <p class="profile-bio">
+            有限会社成田屋代表。大学時代からPA業務に従事。
+            松任谷由美、カシオペアなど著名アーティストのコンサート経験。
+            FM本宮「FMモットコム」番組パーソナリティー。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact-section" id="contact">
+  <div class="section-inner">
+    <div class="section-header fade-in">
+      <p class="section-title-en" style="color:rgba(255,255,255,0.7)">Contact</p>
+      <h2 class="section-title">お問い合わせ</h2>
+      <p class="section-desc">コンサートのご依頼・協賛のお申し込みなど、お気軽にお問い合わせください。</p>
+    </div>
+
+    <div class="contact-card fade-in">
+      <div class="contact-info">
+        <div class="contact-row">
+          <span class="contact-label">団体名</span>
+          <span class="contact-value">一般社団法人 おんがくの杜<br>魂に響くギフトコンサートの会</span>
+        </div>
+        <div class="contact-row">
+          <span class="contact-label">代表</span>
+          <span class="contact-value">橋本 妙子</span>
+        </div>
+        <div class="contact-row">
+          <span class="contact-label">所在地</span>
+          <span class="contact-value">福島県郡山市西田町三町目吉田252</span>
+        </div>
+      </div>
+
+      <form class="contact-form" onsubmit="return false">
+        <div class="form-group">
+          <label>お名前</label>
+          <input type="text" placeholder="山田 太郎">
+        </div>
+        <div class="form-group">
+          <label>メールアドレス</label>
+          <input type="email" placeholder="example@mail.com">
+        </div>
+        <div class="form-group">
+          <label>お問い合わせ内容</label>
+          <textarea placeholder="お気軽にお問い合わせください。"></textarea>
+        </div>
+        <button type="submit" class="submit-btn">送信する</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p class="footer-logo">おんがくの杜</p>
+  <p class="footer-org">一般社団法人 おんがくの杜 魂に響くギフトコンサートの会</p>
+  <p class="footer-address">〒963-0531 福島県郡山市西田町三町目吉田252</p>
+  <div class="footer-links">
+    <a href="#about">活動内容</a>
+    <a href="#news">お知らせ</a>
+    <a href="#profile">プロフィール</a>
+    <a href="#contact">お問い合わせ</a>
+  </div>
+  <p class="footer-copy">© 2016 おんがくの杜 All rights Reserved.</p>
+</footer>
+
+<script>
+// Hero Slider
+let currentSlide = 0;
+const slides = document.querySelectorAll('.hero-slide');
+function nextSlide() {
+  slides[currentSlide].classList.remove('active');
+  currentSlide = (currentSlide + 1) % slides.length;
+  slides[currentSlide].classList.add('active');
+}
+setInterval(nextSlide, 5000);
+
+// Scroll Animation
+const fadeElements = document.querySelectorAll('.fade-in');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
+fadeElements.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
