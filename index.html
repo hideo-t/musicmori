@@ -96,6 +96,69 @@ header {
   transform: translateY(-2px);
 }
 
+/* Language Selector */
+.lang-selector {
+  position: relative;
+  margin-right: 16px;
+}
+.lang-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  transition: all 0.3s;
+}
+.lang-btn:hover {
+  background: var(--bg);
+  border-color: var(--primary);
+}
+.lang-arrow {
+  font-size: 10px;
+  transition: transform 0.3s;
+}
+.lang-selector.open .lang-arrow {
+  transform: rotate(180deg);
+}
+.lang-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 24px var(--shadow);
+  min-width: 180px;
+  z-index: 150;
+  overflow: hidden;
+}
+.lang-menu.active {
+  display: block;
+}
+.lang-option {
+  display: block;
+  padding: 12px 16px;
+  font-size: 14px;
+  color: var(--text);
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.lang-option:hover {
+  background: var(--cream);
+}
+.lang-option.active {
+  background: var(--accent-light);
+  color: var(--primary);
+  font-weight: 600;
+}
+
 .burger {
   display: none;
   background: none;
@@ -775,6 +838,9 @@ footer {
 @media (max-width: 768px) {
   .nav-links { display: none; }
   .burger { display: block; }
+  .lang-selector { margin-right: 8px; }
+  .lang-btn { padding: 6px 10px; font-size: 12px; }
+  .lang-menu { right: -50px; }
   .about-content { grid-template-columns: 1fr; }
   .ngb-content { grid-template-columns: 1fr; }
   .profile-card.featured { grid-template-columns: 1fr; }
@@ -833,12 +899,25 @@ footer {
       <img src="images/logo.png" alt="おんがくの杜">
       <span class="logo-text">おんがくの杜</span>
     </a>
+    <div class="lang-selector">
+      <button class="lang-btn" onclick="toggleLangMenu()">
+        <span class="lang-current">JP</span>
+        <span class="lang-arrow">▼</span>
+      </button>
+      <div class="lang-menu" id="langMenu">
+        <a href="#" onclick="setLang('ja')" class="lang-option active" data-lang="ja">🇯🇵 日本語</a>
+        <a href="#" onclick="setLang('en')" class="lang-option" data-lang="en">🇬🇧 English</a>
+        <a href="#" onclick="setLang('ms')" class="lang-option" data-lang="ms">🇲🇾 Bahasa Melayu</a>
+        <a href="#" onclick="setLang('es')" class="lang-option" data-lang="es">🇪🇸 Español</a>
+        <a href="#" onclick="setLang('zh')" class="lang-option" data-lang="zh">🇨🇳 中文</a>
+      </div>
+    </div>
     <ul class="nav-links">
-      <li><a href="#about">活動内容</a></li>
-      <li><a href="#gallery">ギャラリー</a></li>
-      <li><a href="#profile">プロフィール</a></li>
-      <li><a href="#news">お知らせ</a></li>
-      <li><a href="#contact" class="nav-cta">お問い合わせ</a></li>
+      <li><a href="#about" data-i18n="nav.activities">活動内容</a></li>
+      <li><a href="#gallery" data-i18n="nav.gallery">ギャラリー</a></li>
+      <li><a href="#profile" data-i18n="nav.profile">プロフィール</a></li>
+      <li><a href="#news" data-i18n="nav.news">お知らせ</a></li>
+      <li><a href="#contact" class="nav-cta" data-i18n="nav.contact">お問い合わせ</a></li>
     </ul>
     <button class="burger" onclick="toggleMobileMenu()">
       <span></span><span></span><span></span>
@@ -850,17 +929,27 @@ footer {
 <div class="mobile-menu" id="mobileMenu">
   <button class="mobile-menu-close" onclick="toggleMobileMenu()">&times;</button>
   <ul>
-    <li><a href="#about" onclick="toggleMobileMenu()">活動内容</a></li>
-    <li><a href="#gallery" onclick="toggleMobileMenu()">ギャラリー</a></li>
-    <li><a href="#profile" onclick="toggleMobileMenu()">プロフィール</a></li>
-    <li><a href="#news" onclick="toggleMobileMenu()">お知らせ</a></li>
-    <li><a href="#contact" onclick="toggleMobileMenu()">お問い合わせ</a></li>
+    <li><a href="#about" onclick="toggleMobileMenu()" data-i18n="nav.activities">活動内容</a></li>
+    <li><a href="#gallery" onclick="toggleMobileMenu()" data-i18n="nav.gallery">ギャラリー</a></li>
+    <li><a href="#profile" onclick="toggleMobileMenu()" data-i18n="nav.profile">プロフィール</a></li>
+    <li><a href="#news" onclick="toggleMobileMenu()" data-i18n="nav.news">お知らせ</a></li>
+    <li><a href="#contact" onclick="toggleMobileMenu()" data-i18n="nav.contact">お問い合わせ</a></li>
   </ul>
   <div class="mobile-menu-secondary">
     <a href="#ngb99" onclick="toggleMobileMenu()">NGB99</a>
-    <a href="#video" onclick="toggleMobileMenu()">動画</a>
-    <a href="#customer" onclick="toggleMobileMenu()">お客様の声</a>
+    <a href="#video" onclick="toggleMobileMenu()" data-i18n="nav.video">動画</a>
+    <a href="#customer" onclick="toggleMobileMenu()" data-i18n="nav.customer">お客様の声</a>
     <a href="https://ndanda.base.shop/" target="_blank">nda焙 SHOP</a>
+  </div>
+  <div class="mobile-lang-selector" style="margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border);">
+    <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 12px;" data-i18n="nav.language">言語 / Language</p>
+    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+      <a href="#" onclick="setLang('ja'); toggleMobileMenu();" class="mobile-lang-btn" data-lang="ja" style="padding: 8px 16px; background: var(--bg); border-radius: 20px; font-size: 13px; text-decoration: none; color: var(--text);">🇯🇵 日本語</a>
+      <a href="#" onclick="setLang('en'); toggleMobileMenu();" class="mobile-lang-btn" data-lang="en" style="padding: 8px 16px; background: var(--bg); border-radius: 20px; font-size: 13px; text-decoration: none; color: var(--text);">🇬🇧 English</a>
+      <a href="#" onclick="setLang('ms'); toggleMobileMenu();" class="mobile-lang-btn" data-lang="ms" style="padding: 8px 16px; background: var(--bg); border-radius: 20px; font-size: 13px; text-decoration: none; color: var(--text);">🇲🇾 Melayu</a>
+      <a href="#" onclick="setLang('es'); toggleMobileMenu();" class="mobile-lang-btn" data-lang="es" style="padding: 8px 16px; background: var(--bg); border-radius: 20px; font-size: 13px; text-decoration: none; color: var(--text);">🇪🇸 Español</a>
+      <a href="#" onclick="setLang('zh'); toggleMobileMenu();" class="mobile-lang-btn" data-lang="zh" style="padding: 8px 16px; background: var(--bg); border-radius: 20px; font-size: 13px; text-decoration: none; color: var(--text);">🇨🇳 中文</a>
+    </div>
   </div>
 </div>
 
@@ -879,8 +968,8 @@ footer {
     </div>
   </div>
   <div class="hero-overlay">
-    <h1 class="hero-title">魂に響くギフトコンサート</h1>
-    <p class="hero-sub">
+    <h1 class="hero-title" data-i18n="hero.title">魂に響くギフトコンサート</h1>
+    <p class="hero-sub" data-i18n="hero.subtitle">
       魂に響くおんがくの力で、子ども達からお年寄りまでを対象に<br>
       震災後疲弊した心や精神に安らぎを与えるとともに、<br>
       『うつくしまふくしま』の名にふさわしい本物のまちづくり、人づくりを目指しております。
@@ -892,8 +981,8 @@ footer {
 <section class="section about-section" id="about">
   <div class="section-inner">
     <div class="section-header fade-in">
-      <p class="section-title-en">Activities</p>
-      <h2 class="section-title">活動内容</h2>
+      <p class="section-title-en" data-i18n="about.subtitle">Activities</p>
+      <h2 class="section-title" data-i18n="about.title">活動内容</h2>
     </div>
 
     <div class="about-content fade-in">
@@ -1693,7 +1782,138 @@ footer {
 </div>
 
 <script>
-// Hero Slider
+// ══════════════════════════════════════
+// INTERNATIONALIZATION (i18n)
+// ══════════════════════════════════════
+const translations = {
+  ja: {
+    'nav.activities': '活動内容',
+    'nav.gallery': 'ギャラリー',
+    'nav.profile': 'プロフィール',
+    'nav.news': 'お知らせ',
+    'nav.contact': 'お問い合わせ',
+    'nav.video': '動画',
+    'nav.customer': 'お客様の声',
+    'nav.language': '言語 / Language',
+    'hero.title': '魂に響くギフトコンサート',
+    'hero.subtitle': '魂に響くおんがくの力で、子ども達からお年寄りまでを対象に<br>震災後疲弊した心や精神に安らぎを与えるとともに、<br>『うつくしまふくしま』の名にふさわしい本物のまちづくり、人づくりを目指しております。',
+    'about.title': '活動内容',
+    'about.subtitle': 'Activities'
+  },
+  en: {
+    'nav.activities': 'Activities',
+    'nav.gallery': 'Gallery',
+    'nav.profile': 'Profile',
+    'nav.news': 'News',
+    'nav.contact': 'Contact',
+    'nav.video': 'Videos',
+    'nav.customer': 'Testimonials',
+    'nav.language': 'Language',
+    'hero.title': 'Gift Concert for the Soul',
+    'hero.subtitle': 'Through the power of music that resonates with the soul,<br>we bring comfort to hearts weary from the disaster,<br>building communities and nurturing people worthy of "Beautiful Fukushima".',
+    'about.title': 'Activities',
+    'about.subtitle': 'Activities'
+  },
+  ms: {
+    'nav.activities': 'Aktiviti',
+    'nav.gallery': 'Galeri',
+    'nav.profile': 'Profil',
+    'nav.news': 'Berita',
+    'nav.contact': 'Hubungi',
+    'nav.video': 'Video',
+    'nav.customer': 'Testimoni',
+    'nav.language': 'Bahasa',
+    'hero.title': 'Konsert Hadiah untuk Jiwa',
+    'hero.subtitle': 'Melalui kuasa muzik yang menyentuh jiwa,<br>kami membawa ketenangan kepada hati yang letih akibat bencana,<br>membina komuniti dan memupuk insan yang layak dengan "Fukushima Indah".',
+    'about.title': 'Aktiviti',
+    'about.subtitle': 'Activities'
+  },
+  es: {
+    'nav.activities': 'Actividades',
+    'nav.gallery': 'Galería',
+    'nav.profile': 'Perfil',
+    'nav.news': 'Noticias',
+    'nav.contact': 'Contacto',
+    'nav.video': 'Videos',
+    'nav.customer': 'Testimonios',
+    'nav.language': 'Idioma',
+    'hero.title': 'Concierto Regalo para el Alma',
+    'hero.subtitle': 'A través del poder de la música que resuena en el alma,<br>brindamos consuelo a los corazones afectados por el desastre,<br>construyendo comunidades y formando personas dignas de "Fukushima Hermosa".',
+    'about.title': 'Actividades',
+    'about.subtitle': 'Activities'
+  },
+  zh: {
+    'nav.activities': '活动内容',
+    'nav.gallery': '相册',
+    'nav.profile': '简介',
+    'nav.news': '新闻',
+    'nav.contact': '联系我们',
+    'nav.video': '视频',
+    'nav.customer': '客户反馈',
+    'nav.language': '语言',
+    'hero.title': '触动心灵的礼物音乐会',
+    'hero.subtitle': '用触动心灵的音乐力量，<br>为灾后疲惫的心灵带来慰藉，<br>致力于建设配得上"美丽福岛"之名的城市和人才。',
+    'about.title': '活动内容',
+    'about.subtitle': 'Activities'
+  }
+};
+
+const langLabels = { ja: 'JP', en: 'EN', ms: 'MY', es: 'ES', zh: 'CN' };
+let currentLang = localStorage.getItem('lang') || 'ja';
+
+function toggleLangMenu() {
+  document.querySelector('.lang-selector').classList.toggle('open');
+  document.getElementById('langMenu').classList.toggle('active');
+}
+
+function setLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('lang', lang);
+  document.documentElement.lang = lang === 'zh' ? 'zh-CN' : lang;
+
+  // Update current language display
+  document.querySelector('.lang-current').textContent = langLabels[lang];
+
+  // Update active state in menu
+  document.querySelectorAll('.lang-option').forEach(opt => {
+    opt.classList.toggle('active', opt.dataset.lang === lang);
+  });
+  document.querySelectorAll('.mobile-lang-btn').forEach(btn => {
+    btn.style.background = btn.dataset.lang === lang ? 'var(--accent-light)' : 'var(--bg)';
+    btn.style.fontWeight = btn.dataset.lang === lang ? '600' : '400';
+  });
+
+  // Translate all elements with data-i18n
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.dataset.i18n;
+    if (translations[lang] && translations[lang][key]) {
+      el.innerHTML = translations[lang][key];
+    }
+  });
+
+  // Close menu
+  document.querySelector('.lang-selector').classList.remove('open');
+  document.getElementById('langMenu').classList.remove('active');
+
+  return false;
+}
+
+// Initialize language on load
+document.addEventListener('DOMContentLoaded', () => {
+  setLang(currentLang);
+});
+
+// Close lang menu when clicking outside
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.lang-selector')) {
+    document.querySelector('.lang-selector').classList.remove('open');
+    document.getElementById('langMenu').classList.remove('active');
+  }
+});
+
+// ══════════════════════════════════════
+// HERO SLIDER
+// ══════════════════════════════════════
 let currentSlide = 0;
 const slides = document.querySelectorAll('.hero-slide');
 function nextSlide() {
@@ -1703,7 +1923,9 @@ function nextSlide() {
 }
 setInterval(nextSlide, 5000);
 
-// Scroll Animation
+// ══════════════════════════════════════
+// SCROLL ANIMATION
+// ══════════════════════════════════════
 const fadeElements = document.querySelectorAll('.fade-in');
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -1714,23 +1936,26 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 fadeElements.forEach(el => observer.observe(el));
 
-// Mobile Menu
+// ══════════════════════════════════════
+// MOBILE MENU
+// ══════════════════════════════════════
 function toggleMobileMenu() {
   document.getElementById('mobileMenu').classList.toggle('active');
 }
 
-// Gallery Tabs
+// ══════════════════════════════════════
+// GALLERY TABS
+// ══════════════════════════════════════
 function showGallery(year) {
-  // Remove active from all tabs and buttons
   document.querySelectorAll('.gallery-tab').forEach(tab => tab.classList.remove('active'));
   document.querySelectorAll('.year-btn').forEach(btn => btn.classList.remove('active'));
-
-  // Add active to selected
   document.getElementById('gallery-' + year).classList.add('active');
   event.target.classList.add('active');
 }
 
-// Lightbox
+// ══════════════════════════════════════
+// LIGHTBOX
+// ══════════════════════════════════════
 function openLightbox(src) {
   document.getElementById('lightbox-img').src = src;
   document.getElementById('lightbox').classList.add('active');
