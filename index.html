@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>おんがくの杜 | 魂に響くギフトコンサートの会</title>
+<title id="page-title">おんがくの杜 | 魂に響くギフトコンサートの会</title>
 <meta name="description" content="一般社団法人おんがくの杜 魂に響くギフトコンサートの会。福島県郡山市を拠点に、音楽の力で震災復興の街づくり・人づくりを目指しています。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -896,8 +896,8 @@ footer {
 <header>
   <div class="header-inner">
     <a href="#" class="logo">
-      <img src="images/logo.png" alt="おんがくの杜">
-      <span class="logo-text">おんがくの杜</span>
+      <img src="images/logo.png" alt="おんがくの杜" data-i18n-alt="site.name">
+      <span class="logo-text" data-i18n="site.name">おんがくの杜</span>
     </a>
     <div class="lang-selector">
       <button class="lang-btn" onclick="toggleLangMenu()">
@@ -987,15 +987,15 @@ footer {
 
     <div class="about-content fade-in">
       <div class="about-text">
-        <h3>『魂に響くギフトコンサート』のご紹介</h3>
-        <p>
+        <h3 data-i18n="about.heading">『魂に響くギフトコンサート』のご紹介</h3>
+        <p data-i18n="about.p1">
           本事業は、心に響く音楽を通じて震災復興の街づくり・人づくりを目指します。
         </p>
-        <p>
+        <p data-i18n="about.p2">
           年齢層を考慮した選曲（教科書掲載曲や童謡を含む）で、参加者全員が楽しめるコンサートを実施。
           4月～12月に県内全域および県外の教育機関・福祉施設での公演を予定しています。
         </p>
-        <p>
+        <p data-i18n="about.p3">
           震災後、3年間で250施設（幼稚園、保育所、小中学校、養護学校、老人ホーム等）で音楽鑑賞会を実施。
           約30,000人の子どもたちからお手紙をいただきました。
         </p>
@@ -1008,37 +1008,37 @@ footer {
     <div class="activity-grid fade-in">
       <div class="activity-card">
         <div class="activity-icon">🎵</div>
-        <h4>学校・施設でのコンサート</h4>
-        <p>幼稚園から高校まで、また老人ホームなど福祉施設で年間50回以上のコンサートを実施しています。</p>
+        <h4 data-i18n="activity.concert.title">学校・施設でのコンサート</h4>
+        <p data-i18n="activity.concert.desc">幼稚園から高校まで、また老人ホームなど福祉施設で年間50回以上のコンサートを実施しています。</p>
       </div>
       <div class="activity-card">
         <div class="activity-icon">🎤</div>
-        <h4>奇跡のレッスン</h4>
-        <p>公益社団法人東日本大震災復興財団の支援による声楽指導プログラム。才能ある若い歌手の発掘を行っています。</p>
+        <h4 data-i18n="activity.lesson.title">奇跡のレッスン</h4>
+        <p data-i18n="activity.lesson.desc">公益社団法人東日本大震災復興財団の支援による声楽指導プログラム。才能ある若い歌手の発掘を行っています。</p>
       </div>
       <div class="activity-card">
         <div class="activity-icon">🌍</div>
-        <h4>国際交流</h4>
-        <p>ベラルーシの子どもたちとの文化交流プログラム。2014年・2015年に福島の子どもたちを引率しました。</p>
+        <h4 data-i18n="activity.exchange.title">国際交流</h4>
+        <p data-i18n="activity.exchange.desc">ベラルーシの子どもたちとの文化交流プログラム。2014年・2015年に福島の子どもたちを引率しました。</p>
       </div>
       <div class="activity-card">
         <div class="activity-icon">📰</div>
-        <h4>メディア出演</h4>
-        <p>JFN全国38局放送「サードプレイス」出演など、活動がメディアでも取り上げられています。</p>
+        <h4 data-i18n="activity.media.title">メディア出演</h4>
+        <p data-i18n="activity.media.desc">JFN全国38局放送「サードプレイス」出演など、活動がメディアでも取り上げられています。</p>
       </div>
     </div>
 
     <!-- 協賛金のお願い -->
     <div class="sponsor-box fade-in" style="margin-top: 48px; padding: 32px; background: linear-gradient(135deg, var(--accent-light), var(--cream)); border-radius: var(--radius-lg); text-align: center;">
-      <h3 style="font-family: var(--font-serif); font-size: 20px; color: var(--primary); margin-bottom: 16px;">協賛金のお願い</h3>
-      <p style="font-size: 14px; color: var(--text-light); line-height: 2; max-width: 700px; margin: 0 auto 16px;">
+      <h3 style="font-family: var(--font-serif); font-size: 20px; color: var(--primary); margin-bottom: 16px;" data-i18n="sponsor.title">協賛金のお願い</h3>
+      <p style="font-size: 14px; color: var(--text-light); line-height: 2; max-width: 700px; margin: 0 auto 16px;" data-i18n="sponsor.desc">
         「魂に響くギフトコンサート」事業は、地域づくりのための助成金のみでは多くの学校や介護施設を訪問することが難しい状況です。
         事業の趣旨にご賛同いただける方々を広く募りたく思います。
       </p>
-      <p style="font-size: 14px; color: var(--primary); font-weight: 600;">
+      <p style="font-size: 14px; color: var(--primary); font-weight: 600;" data-i18n="sponsor.amount">
         協賛金：一口 1,000円より
       </p>
-      <a href="#contact" style="display: inline-block; margin-top: 16px; padding: 12px 32px; background: var(--primary); color: var(--white); text-decoration: none; border-radius: 50px; font-weight: 600; font-size: 14px;">お問い合わせはこちら</a>
+      <a href="#contact" style="display: inline-block; margin-top: 16px; padding: 12px 32px; background: var(--primary); color: var(--white); text-decoration: none; border-radius: 50px; font-weight: 600; font-size: 14px;" data-i18n="sponsor.btn">お問い合わせはこちら</a>
     </div>
   </div>
 </section>
@@ -1047,8 +1047,8 @@ footer {
 <section class="section news-section" id="news">
   <div class="section-inner">
     <div class="section-header fade-in">
-      <p class="section-title-en">News</p>
-      <h2 class="section-title">お知らせ</h2>
+      <p class="section-title-en" data-i18n="news.subtitle">News</p>
+      <h2 class="section-title" data-i18n="news.title">お知らせ</h2>
     </div>
 
     <div class="news-list fade-in">
@@ -1107,9 +1107,9 @@ footer {
 <section class="section gallery-section" id="gallery">
   <div class="section-inner">
     <div class="section-header fade-in">
-      <p class="section-title-en">Gallery</p>
-      <h2 class="section-title">ギャラリー</h2>
-      <p class="section-desc">2013年から現在までの活動記録をご覧いただけます。</p>
+      <p class="section-title-en" data-i18n="gallery.subtitle">Gallery</p>
+      <h2 class="section-title" data-i18n="gallery.title">ギャラリー</h2>
+      <p class="section-desc" data-i18n="gallery.desc">2013年から現在までの活動記録をご覧いただけます。</p>
     </div>
 
     <div class="gallery-years fade-in">
@@ -1476,9 +1476,9 @@ footer {
 <section class="section ngb-section" id="ngb99">
   <div class="section-inner">
     <div class="section-header fade-in">
-      <p class="section-title-en">Special Project</p>
-      <h2 class="section-title">NGB99物語</h2>
-      <p class="section-desc">天国にいちばん近いアイドル</p>
+      <p class="section-title-en" data-i18n="ngb.subtitle">Special Project</p>
+      <h2 class="section-title" data-i18n="ngb.title">NGB99物語</h2>
+      <p class="section-desc" data-i18n="ngb.desc">天国にいちばん近いアイドル</p>
     </div>
 
     <div class="ngb-content fade-in">
@@ -1536,9 +1536,9 @@ footer {
 <section class="section video-section" id="video">
   <div class="section-inner">
     <div class="section-header fade-in">
-      <p class="section-title-en">Video</p>
-      <h2 class="section-title">動画</h2>
-      <p class="section-desc">コンサートやイベントの様子を動画でご覧いただけます。</p>
+      <p class="section-title-en" data-i18n="video.subtitle">Video</p>
+      <h2 class="section-title" data-i18n="video.title">動画</h2>
+      <p class="section-desc" data-i18n="video.desc">コンサートやイベントの様子を動画でご覧いただけます。</p>
     </div>
 
     <div class="video-grid fade-in">
@@ -1580,12 +1580,12 @@ footer {
 <section class="section customer-section" id="customer">
   <div class="section-inner">
     <div class="section-header fade-in">
-      <p class="section-title-en">Customer Voice</p>
-      <h2 class="section-title">お客様の声</h2>
+      <p class="section-title-en" data-i18n="customer.subtitle">Customer Voice</p>
+      <h2 class="section-title" data-i18n="customer.title">お客様の声</h2>
     </div>
 
     <div class="customer-intro fade-in">
-      <p>
+      <p data-i18n="customer.intro">
         震災後、3年間で250施設で音楽鑑賞会を実施し、<br>
         約30,000人の子どもたちからお手紙やイラストをいただきました。<br>
         子どもたちの想いが詰まった作品の一部をご紹介します。
@@ -1609,17 +1609,17 @@ footer {
 <!-- NDABAI SHOP BANNER -->
 <section class="shop-banner">
   <h2>nda焙</h2>
-  <p>お米と発酵café&shop<br>オンラインショップがオープンしました</p>
-  <a href="https://ndanda.base.shop/" target="_blank" class="shop-btn">SHOP を見る</a>
+  <p data-i18n="shop.desc">お米と発酵café&shop<br>オンラインショップがオープンしました</p>
+  <a href="https://ndanda.base.shop/" target="_blank" class="shop-btn" data-i18n="shop.btn">SHOP を見る</a>
 </section>
 
 <!-- PROFILE -->
 <section class="section profile-section" id="profile">
   <div class="section-inner">
     <div class="section-header fade-in">
-      <p class="section-title-en">Profile</p>
-      <h2 class="section-title">プロフィール</h2>
-      <p class="section-desc">おんがくの杜を支えるメンバーをご紹介します。</p>
+      <p class="section-title-en" data-i18n="profile.subtitle">Profile</p>
+      <h2 class="section-title" data-i18n="profile.title">プロフィール</h2>
+      <p class="section-desc" data-i18n="profile.desc">おんがくの杜を支えるメンバーをご紹介します。</p>
     </div>
 
     <div class="profile-grid fade-in">
@@ -1701,54 +1701,54 @@ footer {
 <section class="section contact-section" id="contact">
   <div class="section-inner">
     <div class="section-header fade-in">
-      <p class="section-title-en" style="color:rgba(255,255,255,0.7)">Contact</p>
-      <h2 class="section-title">お問い合わせ</h2>
-      <p class="section-desc">コンサートのご依頼・協賛のお申し込みなど、お気軽にお問い合わせください。</p>
+      <p class="section-title-en" style="color:rgba(255,255,255,0.7)" data-i18n="contact.subtitle">Contact</p>
+      <h2 class="section-title" data-i18n="contact.title">お問い合わせ</h2>
+      <p class="section-desc" data-i18n="contact.desc">コンサートのご依頼・協賛のお申し込みなど、お気軽にお問い合わせください。</p>
     </div>
 
     <div class="contact-card fade-in">
       <div class="contact-info">
         <div class="contact-row">
-          <span class="contact-label">団体名</span>
-          <span class="contact-value">一般社団法人 おんがくの杜<br>魂に響くギフトコンサートの会</span>
+          <span class="contact-label" data-i18n="contact.org_label">団体名</span>
+          <span class="contact-value" data-i18n="contact.org_value">一般社団法人 おんがくの杜<br>魂に響くギフトコンサートの会</span>
         </div>
         <div class="contact-row">
-          <span class="contact-label">代表</span>
+          <span class="contact-label" data-i18n="contact.rep_label">代表</span>
           <span class="contact-value">橋本 妙子</span>
         </div>
         <div class="contact-row">
-          <span class="contact-label">所在地</span>
-          <span class="contact-value">〒963-0531<br>福島県郡山市西田町三町目吉田252</span>
+          <span class="contact-label" data-i18n="contact.addr_label">所在地</span>
+          <span class="contact-value" data-i18n="contact.addr_value">〒963-0531<br>福島県郡山市西田町三町目吉田252</span>
         </div>
       </div>
 
       <form class="contact-form" onsubmit="return false">
         <div class="form-group">
-          <label>お問い合わせ種別</label>
-          <select>
-            <option value="">選択してください</option>
-            <option value="concert">コンサートのご依頼</option>
-            <option value="sponsor">協賛について</option>
-            <option value="other">その他のお問い合わせ</option>
+          <label data-i18n="form.type">お問い合わせ種別</label>
+          <select id="inquiry-type">
+            <option value="" data-i18n="form.select">選択してください</option>
+            <option value="concert" data-i18n="form.concert">コンサートのご依頼</option>
+            <option value="sponsor" data-i18n="form.sponsor">協賛について</option>
+            <option value="other" data-i18n="form.other">その他のお問い合わせ</option>
           </select>
         </div>
         <div class="form-group">
-          <label>お名前</label>
-          <input type="text" placeholder="山田 太郎">
+          <label data-i18n="form.name">お名前</label>
+          <input type="text" id="input-name" placeholder="山田 太郎" data-i18n-placeholder="form.name_ph">
         </div>
         <div class="form-group">
-          <label>メールアドレス</label>
+          <label data-i18n="form.email">メールアドレス</label>
           <input type="email" placeholder="example@mail.com">
         </div>
         <div class="form-group">
-          <label>電話番号</label>
+          <label data-i18n="form.tel">電話番号</label>
           <input type="tel" placeholder="000-0000-0000">
         </div>
         <div class="form-group">
-          <label>お問い合わせ内容</label>
-          <textarea placeholder="お気軽にお問い合わせください。"></textarea>
+          <label data-i18n="form.message">お問い合わせ内容</label>
+          <textarea id="input-message" placeholder="お気軽にお問い合わせください。" data-i18n-placeholder="form.message_ph"></textarea>
         </div>
-        <button type="submit" class="submit-btn">送信する</button>
+        <button type="submit" class="submit-btn" data-i18n="form.submit">送信する</button>
       </form>
     </div>
   </div>
@@ -1756,23 +1756,23 @@ footer {
 
 <!-- FOOTER -->
 <footer>
-  <p class="footer-logo">おんがくの杜</p>
-  <p class="footer-org">一般社団法人 おんがくの杜 魂に響くギフトコンサートの会</p>
-  <p class="footer-address">〒963-0531 福島県郡山市西田町三町目吉田252</p>
+  <p class="footer-logo" data-i18n="site.name">おんがくの杜</p>
+  <p class="footer-org" data-i18n="footer.org">一般社団法人 おんがくの杜 魂に響くギフトコンサートの会</p>
+  <p class="footer-address" data-i18n="footer.address">〒963-0531 福島県郡山市西田町三町目吉田252</p>
   <div class="footer-links">
-    <a href="#about">活動内容</a>
-    <a href="#news">お知らせ</a>
-    <a href="#gallery">ギャラリー</a>
+    <a href="#about" data-i18n="nav.activities">活動内容</a>
+    <a href="#news" data-i18n="nav.news">お知らせ</a>
+    <a href="#gallery" data-i18n="nav.gallery">ギャラリー</a>
     <a href="#ngb99">NGB99</a>
-    <a href="#video">動画</a>
-    <a href="#customer">お客様の声</a>
-    <a href="#profile">プロフィール</a>
-    <a href="#contact">お問い合わせ</a>
+    <a href="#video" data-i18n="nav.video">動画</a>
+    <a href="#customer" data-i18n="nav.customer">お客様の声</a>
+    <a href="#profile" data-i18n="nav.profile">プロフィール</a>
+    <a href="#contact" data-i18n="nav.contact">お問い合わせ</a>
     <a href="https://ndanda.base.shop/" target="_blank">nda焙 SHOP</a>
-    <a href="https://www.facebook.com/HunniXiangkugifutokonsato" target="_blank">Facebook (団体)</a>
-    <a href="https://www.facebook.com/Taeko.musicmori" target="_blank">Facebook (代表)</a>
+    <a href="https://www.facebook.com/HunniXiangkugifutokonsato" target="_blank" data-i18n="footer.fb_org">Facebook (団体)</a>
+    <a href="https://www.facebook.com/Taeko.musicmori" target="_blank" data-i18n="footer.fb_rep">Facebook (代表)</a>
   </div>
-  <p class="footer-copy">&copy; 2016 おんがくの杜 All rights Reserved.</p>
+  <p class="footer-copy" data-i18n="footer.copy">&copy; 2016 おんがくの杜 All rights Reserved.</p>
 </footer>
 
 <!-- Lightbox -->
@@ -1787,6 +1787,8 @@ footer {
 // ══════════════════════════════════════
 const translations = {
   ja: {
+    'site.name': 'おんがくの杜',
+    'site.title': 'おんがくの杜 | 魂に響くギフトコンサートの会',
     'nav.activities': '活動内容',
     'nav.gallery': 'ギャラリー',
     'nav.profile': 'プロフィール',
@@ -1798,9 +1800,71 @@ const translations = {
     'hero.title': '魂に響くギフトコンサート',
     'hero.subtitle': '魂に響くおんがくの力で、子ども達からお年寄りまでを対象に<br>震災後疲弊した心や精神に安らぎを与えるとともに、<br>『うつくしまふくしま』の名にふさわしい本物のまちづくり、人づくりを目指しております。',
     'about.title': '活動内容',
-    'about.subtitle': 'Activities'
+    'about.subtitle': 'Activities',
+    'about.heading': '『魂に響くギフトコンサート』のご紹介',
+    'about.p1': '本事業は、心に響く音楽を通じて震災復興の街づくり・人づくりを目指します。',
+    'about.p2': '年齢層を考慮した選曲（教科書掲載曲や童謡を含む）で、参加者全員が楽しめるコンサートを実施。4月～12月に県内全域および県外の教育機関・福祉施設での公演を予定しています。',
+    'about.p3': '震災後、3年間で250施設（幼稚園、保育所、小中学校、養護学校、老人ホーム等）で音楽鑑賞会を実施。約30,000人の子どもたちからお手紙をいただきました。',
+    'activity.concert.title': '学校・施設でのコンサート',
+    'activity.concert.desc': '幼稚園から高校まで、また老人ホームなど福祉施設で年間50回以上のコンサートを実施しています。',
+    'activity.lesson.title': '奇跡のレッスン',
+    'activity.lesson.desc': '公益社団法人東日本大震災復興財団の支援による声楽指導プログラム。才能ある若い歌手の発掘を行っています。',
+    'activity.exchange.title': '国際交流',
+    'activity.exchange.desc': 'ベラルーシの子どもたちとの文化交流プログラム。2014年・2015年に福島の子どもたちを引率しました。',
+    'activity.media.title': 'メディア出演',
+    'activity.media.desc': 'JFN全国38局放送「サードプレイス」出演など、活動がメディアでも取り上げられています。',
+    'sponsor.title': '協賛金のお願い',
+    'sponsor.desc': '「魂に響くギフトコンサート」事業は、地域づくりのための助成金のみでは多くの学校や介護施設を訪問することが難しい状況です。事業の趣旨にご賛同いただける方々を広く募りたく思います。',
+    'sponsor.amount': '協賛金：一口 1,000円より',
+    'sponsor.btn': 'お問い合わせはこちら',
+    'news.title': 'お知らせ',
+    'news.subtitle': 'News',
+    'gallery.title': 'ギャラリー',
+    'gallery.subtitle': 'Gallery',
+    'gallery.desc': '2013年から現在までの活動記録をご覧いただけます。',
+    'ngb.title': 'NGB99物語',
+    'ngb.subtitle': 'Special Project',
+    'ngb.desc': '天国にいちばん近いアイドル',
+    'video.title': '動画',
+    'video.subtitle': 'Video',
+    'video.desc': 'コンサートやイベントの様子を動画でご覧いただけます。',
+    'customer.title': 'お客様の声',
+    'customer.subtitle': 'Customer Voice',
+    'customer.intro': '震災後、3年間で250施設で音楽鑑賞会を実施し、<br>約30,000人の子どもたちからお手紙やイラストをいただきました。<br>子どもたちの想いが詰まった作品の一部をご紹介します。',
+    'shop.desc': 'お米と発酵café&shop<br>オンラインショップがオープンしました',
+    'shop.btn': 'SHOP を見る',
+    'profile.title': 'プロフィール',
+    'profile.subtitle': 'Profile',
+    'profile.desc': 'おんがくの杜を支えるメンバーをご紹介します。',
+    'contact.title': 'お問い合わせ',
+    'contact.subtitle': 'Contact',
+    'contact.desc': 'コンサートのご依頼・協賛のお申し込みなど、お気軽にお問い合わせください。',
+    'contact.org_label': '団体名',
+    'contact.org_value': '一般社団法人 おんがくの杜<br>魂に響くギフトコンサートの会',
+    'contact.rep_label': '代表',
+    'contact.addr_label': '所在地',
+    'contact.addr_value': '〒963-0531<br>福島県郡山市西田町三町目吉田252',
+    'form.type': 'お問い合わせ種別',
+    'form.select': '選択してください',
+    'form.concert': 'コンサートのご依頼',
+    'form.sponsor': '協賛について',
+    'form.other': 'その他のお問い合わせ',
+    'form.name': 'お名前',
+    'form.name_ph': '山田 太郎',
+    'form.email': 'メールアドレス',
+    'form.tel': '電話番号',
+    'form.message': 'お問い合わせ内容',
+    'form.message_ph': 'お気軽にお問い合わせください。',
+    'form.submit': '送信する',
+    'footer.org': '一般社団法人 おんがくの杜 魂に響くギフトコンサートの会',
+    'footer.address': '〒963-0531 福島県郡山市西田町三町目吉田252',
+    'footer.fb_org': 'Facebook (団体)',
+    'footer.fb_rep': 'Facebook (代表)',
+    'footer.copy': '&copy; 2016 おんがくの杜 All rights Reserved.'
   },
   en: {
+    'site.name': 'Music Forest',
+    'site.title': 'Music Forest | Gift Concert for the Soul',
     'nav.activities': 'Activities',
     'nav.gallery': 'Gallery',
     'nav.profile': 'Profile',
@@ -1812,9 +1876,71 @@ const translations = {
     'hero.title': 'Gift Concert for the Soul',
     'hero.subtitle': 'Through the power of music that resonates with the soul,<br>we bring comfort to hearts weary from the disaster,<br>building communities and nurturing people worthy of "Beautiful Fukushima".',
     'about.title': 'Activities',
-    'about.subtitle': 'Activities'
+    'about.subtitle': 'Activities',
+    'about.heading': 'Introduction to Gift Concert for the Soul',
+    'about.p1': 'This project aims to build communities and nurture people through music that touches the heart.',
+    'about.p2': 'We hold concerts with age-appropriate song selections (including textbook songs and nursery rhymes) that everyone can enjoy. Performances are scheduled at educational institutions and welfare facilities throughout Fukushima Prefecture from April to December.',
+    'about.p3': 'After the disaster, we held music appreciation events at 250 facilities (kindergartens, nurseries, elementary/junior high schools, special needs schools, nursing homes) over 3 years. We received letters from approximately 30,000 children.',
+    'activity.concert.title': 'School & Facility Concerts',
+    'activity.concert.desc': 'We hold over 50 concerts annually at kindergartens, schools, nursing homes, and other welfare facilities.',
+    'activity.lesson.title': 'Miracle Lessons',
+    'activity.lesson.desc': 'A vocal instruction program supported by the Great East Japan Earthquake Recovery Foundation. We discover talented young singers.',
+    'activity.exchange.title': 'International Exchange',
+    'activity.exchange.desc': 'Cultural exchange program with children from Belarus. We led children from Fukushima in 2014 and 2015.',
+    'activity.media.title': 'Media Appearances',
+    'activity.media.desc': 'Our activities have been featured in media, including appearances on JFN\'s nationwide radio program "Third Place".',
+    'sponsor.title': 'Request for Sponsorship',
+    'sponsor.desc': 'The "Gift Concert for the Soul" project finds it difficult to visit many schools and care facilities with regional development grants alone. We are seeking supporters who share our mission.',
+    'sponsor.amount': 'Sponsorship: From ¥1,000',
+    'sponsor.btn': 'Contact Us',
+    'news.title': 'News',
+    'news.subtitle': 'News',
+    'gallery.title': 'Gallery',
+    'gallery.subtitle': 'Gallery',
+    'gallery.desc': 'View our activity records from 2013 to present.',
+    'ngb.title': 'NGB99 Story',
+    'ngb.subtitle': 'Special Project',
+    'ngb.desc': 'The Idol Group Closest to Heaven',
+    'video.title': 'Videos',
+    'video.subtitle': 'Video',
+    'video.desc': 'Watch videos of our concerts and events.',
+    'customer.title': 'Testimonials',
+    'customer.subtitle': 'Customer Voice',
+    'customer.intro': 'After the disaster, we held music appreciation events at 250 facilities over 3 years,<br>receiving letters and drawings from approximately 30,000 children.<br>Here are some works filled with children\'s thoughts.',
+    'shop.desc': 'Rice & Fermented café&shop<br>Online shop is now open',
+    'shop.btn': 'Visit Shop',
+    'profile.title': 'Profile',
+    'profile.subtitle': 'Profile',
+    'profile.desc': 'Meet the members who support Music Forest.',
+    'contact.title': 'Contact',
+    'contact.subtitle': 'Contact',
+    'contact.desc': 'Please feel free to contact us for concert requests, sponsorship inquiries, and more.',
+    'contact.org_label': 'Organization',
+    'contact.org_value': 'Music Forest Association<br>Gift Concert for the Soul',
+    'contact.rep_label': 'Representative',
+    'contact.addr_label': 'Address',
+    'contact.addr_value': '〒963-0531<br>252 Yoshida, Sandanme, Nishida-machi,<br>Koriyama City, Fukushima, Japan',
+    'form.type': 'Inquiry Type',
+    'form.select': 'Please select',
+    'form.concert': 'Concert Request',
+    'form.sponsor': 'Sponsorship',
+    'form.other': 'Other Inquiries',
+    'form.name': 'Name',
+    'form.name_ph': 'Your Name',
+    'form.email': 'Email',
+    'form.tel': 'Phone',
+    'form.message': 'Message',
+    'form.message_ph': 'Please feel free to contact us.',
+    'form.submit': 'Submit',
+    'footer.org': 'Music Forest Association - Gift Concert for the Soul',
+    'footer.address': '252 Yoshida, Nishida-machi, Koriyama, Fukushima 963-0531, Japan',
+    'footer.fb_org': 'Facebook (Organization)',
+    'footer.fb_rep': 'Facebook (Representative)',
+    'footer.copy': '&copy; 2016 Music Forest. All rights Reserved.'
   },
   ms: {
+    'site.name': 'Music Forest',
+    'site.title': 'Music Forest | Konsert Hadiah untuk Jiwa',
     'nav.activities': 'Aktiviti',
     'nav.gallery': 'Galeri',
     'nav.profile': 'Profil',
@@ -1826,9 +1952,71 @@ const translations = {
     'hero.title': 'Konsert Hadiah untuk Jiwa',
     'hero.subtitle': 'Melalui kuasa muzik yang menyentuh jiwa,<br>kami membawa ketenangan kepada hati yang letih akibat bencana,<br>membina komuniti dan memupuk insan yang layak dengan "Fukushima Indah".',
     'about.title': 'Aktiviti',
-    'about.subtitle': 'Activities'
+    'about.subtitle': 'Activities',
+    'about.heading': 'Pengenalan Konsert Hadiah untuk Jiwa',
+    'about.p1': 'Projek ini bertujuan membina komuniti dan memupuk insan melalui muzik yang menyentuh hati.',
+    'about.p2': 'Kami mengadakan konsert dengan pemilihan lagu sesuai usia (termasuk lagu buku teks dan lagu kanak-kanak) yang semua boleh nikmati. Persembahan dijadualkan di institusi pendidikan dan kemudahan kebajikan di seluruh Fukushima dari April hingga Disember.',
+    'about.p3': 'Selepas bencana, kami mengadakan acara apresiasi muzik di 250 kemudahan selama 3 tahun. Kami menerima surat daripada kira-kira 30,000 kanak-kanak.',
+    'activity.concert.title': 'Konsert Sekolah & Kemudahan',
+    'activity.concert.desc': 'Kami mengadakan lebih 50 konsert setiap tahun di tadika, sekolah, rumah orang tua, dan kemudahan kebajikan lain.',
+    'activity.lesson.title': 'Pelajaran Ajaib',
+    'activity.lesson.desc': 'Program pengajaran vokal yang disokong oleh Yayasan Pemulihan Gempa Bumi Jepun Timur. Kami menemui penyanyi muda berbakat.',
+    'activity.exchange.title': 'Pertukaran Antarabangsa',
+    'activity.exchange.desc': 'Program pertukaran budaya dengan kanak-kanak Belarus. Kami membawa kanak-kanak Fukushima pada 2014 dan 2015.',
+    'activity.media.title': 'Penampilan Media',
+    'activity.media.desc': 'Aktiviti kami telah dipaparkan dalam media, termasuk program radio JFN "Third Place".',
+    'sponsor.title': 'Permohonan Penajaan',
+    'sponsor.desc': 'Projek "Konsert Hadiah untuk Jiwa" sukar melawat banyak sekolah dan kemudahan dengan geran pembangunan sahaja. Kami mencari penyokong yang berkongsi misi kami.',
+    'sponsor.amount': 'Penajaan: Dari ¥1,000',
+    'sponsor.btn': 'Hubungi Kami',
+    'news.title': 'Berita',
+    'news.subtitle': 'News',
+    'gallery.title': 'Galeri',
+    'gallery.subtitle': 'Gallery',
+    'gallery.desc': 'Lihat rekod aktiviti kami dari 2013 hingga kini.',
+    'ngb.title': 'Kisah NGB99',
+    'ngb.subtitle': 'Special Project',
+    'ngb.desc': 'Kumpulan Idol Paling Dekat dengan Syurga',
+    'video.title': 'Video',
+    'video.subtitle': 'Video',
+    'video.desc': 'Tonton video konsert dan acara kami.',
+    'customer.title': 'Testimoni',
+    'customer.subtitle': 'Customer Voice',
+    'customer.intro': 'Selepas bencana, kami mengadakan acara apresiasi muzik di 250 kemudahan selama 3 tahun,<br>menerima surat dan lukisan daripada kira-kira 30,000 kanak-kanak.<br>Berikut adalah beberapa karya penuh perasaan kanak-kanak.',
+    'shop.desc': 'Beras & Fermentasi café&shop<br>Kedai dalam talian kini dibuka',
+    'shop.btn': 'Lawati Kedai',
+    'profile.title': 'Profil',
+    'profile.subtitle': 'Profile',
+    'profile.desc': 'Kenali ahli yang menyokong Music Forest.',
+    'contact.title': 'Hubungi',
+    'contact.subtitle': 'Contact',
+    'contact.desc': 'Sila hubungi kami untuk permintaan konsert, pertanyaan penajaan, dan lain-lain.',
+    'contact.org_label': 'Organisasi',
+    'contact.org_value': 'Persatuan Music Forest<br>Konsert Hadiah untuk Jiwa',
+    'contact.rep_label': 'Wakil',
+    'contact.addr_label': 'Alamat',
+    'contact.addr_value': '〒963-0531<br>252 Yoshida, Sandanme, Nishida-machi,<br>Bandar Koriyama, Fukushima, Jepun',
+    'form.type': 'Jenis Pertanyaan',
+    'form.select': 'Sila pilih',
+    'form.concert': 'Permintaan Konsert',
+    'form.sponsor': 'Penajaan',
+    'form.other': 'Pertanyaan Lain',
+    'form.name': 'Nama',
+    'form.name_ph': 'Nama Anda',
+    'form.email': 'E-mel',
+    'form.tel': 'Telefon',
+    'form.message': 'Mesej',
+    'form.message_ph': 'Sila hubungi kami.',
+    'form.submit': 'Hantar',
+    'footer.org': 'Persatuan Music Forest - Konsert Hadiah untuk Jiwa',
+    'footer.address': '252 Yoshida, Nishida-machi, Koriyama, Fukushima 963-0531, Jepun',
+    'footer.fb_org': 'Facebook (Organisasi)',
+    'footer.fb_rep': 'Facebook (Wakil)',
+    'footer.copy': '&copy; 2016 Music Forest. Hak cipta terpelihara.'
   },
   es: {
+    'site.name': 'Music Forest',
+    'site.title': 'Music Forest | Concierto Regalo para el Alma',
     'nav.activities': 'Actividades',
     'nav.gallery': 'Galería',
     'nav.profile': 'Perfil',
@@ -1840,9 +2028,71 @@ const translations = {
     'hero.title': 'Concierto Regalo para el Alma',
     'hero.subtitle': 'A través del poder de la música que resuena en el alma,<br>brindamos consuelo a los corazones afectados por el desastre,<br>construyendo comunidades y formando personas dignas de "Fukushima Hermosa".',
     'about.title': 'Actividades',
-    'about.subtitle': 'Activities'
+    'about.subtitle': 'Activities',
+    'about.heading': 'Introducción al Concierto Regalo para el Alma',
+    'about.p1': 'Este proyecto busca construir comunidades y formar personas a través de la música que toca el corazón.',
+    'about.p2': 'Realizamos conciertos con selecciones de canciones apropiadas para cada edad (incluyendo canciones de libros de texto y canciones infantiles) que todos pueden disfrutar. Las presentaciones se programan en instituciones educativas y centros de bienestar en toda la Prefectura de Fukushima de abril a diciembre.',
+    'about.p3': 'Después del desastre, realizamos eventos de apreciación musical en 250 instalaciones durante 3 años. Recibimos cartas de aproximadamente 30,000 niños.',
+    'activity.concert.title': 'Conciertos en Escuelas e Instalaciones',
+    'activity.concert.desc': 'Realizamos más de 50 conciertos anuales en jardines de infancia, escuelas, hogares de ancianos y otras instalaciones de bienestar.',
+    'activity.lesson.title': 'Lecciones Milagrosas',
+    'activity.lesson.desc': 'Un programa de instrucción vocal apoyado por la Fundación de Recuperación del Gran Terremoto de Japón Oriental. Descubrimos jóvenes cantantes talentosos.',
+    'activity.exchange.title': 'Intercambio Internacional',
+    'activity.exchange.desc': 'Programa de intercambio cultural con niños de Bielorrusia. Llevamos niños de Fukushima en 2014 y 2015.',
+    'activity.media.title': 'Apariciones en Medios',
+    'activity.media.desc': 'Nuestras actividades han sido presentadas en medios, incluyendo apariciones en el programa de radio nacional de JFN "Third Place".',
+    'sponsor.title': 'Solicitud de Patrocinio',
+    'sponsor.desc': 'El proyecto "Concierto Regalo para el Alma" encuentra difícil visitar muchas escuelas e instalaciones solo con subvenciones regionales. Buscamos patrocinadores que compartan nuestra misión.',
+    'sponsor.amount': 'Patrocinio: Desde ¥1,000',
+    'sponsor.btn': 'Contáctenos',
+    'news.title': 'Noticias',
+    'news.subtitle': 'News',
+    'gallery.title': 'Galería',
+    'gallery.subtitle': 'Gallery',
+    'gallery.desc': 'Vea nuestros registros de actividades desde 2013 hasta el presente.',
+    'ngb.title': 'Historia de NGB99',
+    'ngb.subtitle': 'Special Project',
+    'ngb.desc': 'El Grupo Idol Más Cercano al Cielo',
+    'video.title': 'Videos',
+    'video.subtitle': 'Video',
+    'video.desc': 'Vea videos de nuestros conciertos y eventos.',
+    'customer.title': 'Testimonios',
+    'customer.subtitle': 'Customer Voice',
+    'customer.intro': 'Después del desastre, realizamos eventos de apreciación musical en 250 instalaciones durante 3 años,<br>recibiendo cartas y dibujos de aproximadamente 30,000 niños.<br>Aquí hay algunas obras llenas de los pensamientos de los niños.',
+    'shop.desc': 'Arroz y café&shop fermentado<br>La tienda en línea ya está abierta',
+    'shop.btn': 'Visitar Tienda',
+    'profile.title': 'Perfil',
+    'profile.subtitle': 'Profile',
+    'profile.desc': 'Conozca a los miembros que apoyan Music Forest.',
+    'contact.title': 'Contacto',
+    'contact.subtitle': 'Contact',
+    'contact.desc': 'Por favor contáctenos para solicitudes de conciertos, consultas de patrocinio y más.',
+    'contact.org_label': 'Organización',
+    'contact.org_value': 'Asociación Music Forest<br>Concierto Regalo para el Alma',
+    'contact.rep_label': 'Representante',
+    'contact.addr_label': 'Dirección',
+    'contact.addr_value': '〒963-0531<br>252 Yoshida, Sandanme, Nishida-machi,<br>Ciudad de Koriyama, Fukushima, Japón',
+    'form.type': 'Tipo de Consulta',
+    'form.select': 'Por favor seleccione',
+    'form.concert': 'Solicitud de Concierto',
+    'form.sponsor': 'Patrocinio',
+    'form.other': 'Otras Consultas',
+    'form.name': 'Nombre',
+    'form.name_ph': 'Su Nombre',
+    'form.email': 'Correo Electrónico',
+    'form.tel': 'Teléfono',
+    'form.message': 'Mensaje',
+    'form.message_ph': 'Por favor contáctenos.',
+    'form.submit': 'Enviar',
+    'footer.org': 'Asociación Music Forest - Concierto Regalo para el Alma',
+    'footer.address': '252 Yoshida, Nishida-machi, Koriyama, Fukushima 963-0531, Japón',
+    'footer.fb_org': 'Facebook (Organización)',
+    'footer.fb_rep': 'Facebook (Representante)',
+    'footer.copy': '&copy; 2016 Music Forest. Todos los derechos reservados.'
   },
   zh: {
+    'site.name': 'Music Forest',
+    'site.title': 'Music Forest | 触动心灵的礼物音乐会',
     'nav.activities': '活动内容',
     'nav.gallery': '相册',
     'nav.profile': '简介',
@@ -1854,7 +2104,67 @@ const translations = {
     'hero.title': '触动心灵的礼物音乐会',
     'hero.subtitle': '用触动心灵的音乐力量，<br>为灾后疲惫的心灵带来慰藉，<br>致力于建设配得上"美丽福岛"之名的城市和人才。',
     'about.title': '活动内容',
-    'about.subtitle': 'Activities'
+    'about.subtitle': 'Activities',
+    'about.heading': '触动心灵的礼物音乐会介绍',
+    'about.p1': '本项目旨在通过触动心灵的音乐，建设灾后复兴的城市和人才。',
+    'about.p2': '我们举办适合各年龄层的音乐会（包括教科书歌曲和童谣），让所有参与者都能享受。4月至12月在县内外的教育机构和福利设施进行演出。',
+    'about.p3': '震灾后，我们在3年内于250个设施（幼儿园、托儿所、中小学、特殊学校、养老院等）举办了音乐欣赏会，收到了约30,000名儿童的来信。',
+    'activity.concert.title': '学校和设施音乐会',
+    'activity.concert.desc': '我们每年在幼儿园、学校、养老院和其他福利设施举办50多场音乐会。',
+    'activity.lesson.title': '奇迹课程',
+    'activity.lesson.desc': '由东日本大震灾复兴财团支持的声乐指导项目。我们发掘有才华的年轻歌手。',
+    'activity.exchange.title': '国际交流',
+    'activity.exchange.desc': '与白俄罗斯儿童的文化交流项目。2014年和2015年带领福岛儿童出访。',
+    'activity.media.title': '媒体出演',
+    'activity.media.desc': '我们的活动受到媒体关注，包括在JFN全国广播节目"Third Place"中出演。',
+    'sponsor.title': '赞助请求',
+    'sponsor.desc': '"触动心灵的礼物音乐会"项目仅靠地区发展补助金难以访问众多学校和护理设施。我们正在寻找认同我们使命的支持者。',
+    'sponsor.amount': '赞助：每份1,000日元起',
+    'sponsor.btn': '联系我们',
+    'news.title': '新闻',
+    'news.subtitle': 'News',
+    'gallery.title': '相册',
+    'gallery.subtitle': 'Gallery',
+    'gallery.desc': '查看我们从2013年至今的活动记录。',
+    'ngb.title': 'NGB99的故事',
+    'ngb.subtitle': 'Special Project',
+    'ngb.desc': '最接近天堂的偶像团体',
+    'video.title': '视频',
+    'video.subtitle': 'Video',
+    'video.desc': '观看我们音乐会和活动的视频。',
+    'customer.title': '客户反馈',
+    'customer.subtitle': 'Customer Voice',
+    'customer.intro': '震灾后，我们在3年内于250个设施举办了音乐欣赏会，<br>收到了约30,000名儿童的来信和绘画。<br>这里是一些充满孩子们心意的作品。',
+    'shop.desc': '大米与发酵café&shop<br>网上商店现已开业',
+    'shop.btn': '访问商店',
+    'profile.title': '简介',
+    'profile.subtitle': 'Profile',
+    'profile.desc': '认识支持Music Forest的成员。',
+    'contact.title': '联系我们',
+    'contact.subtitle': 'Contact',
+    'contact.desc': '如需音乐会预约、赞助咨询等，请随时联系我们。',
+    'contact.org_label': '组织名称',
+    'contact.org_value': 'Music Forest协会<br>触动心灵的礼物音乐会',
+    'contact.rep_label': '代表',
+    'contact.addr_label': '地址',
+    'contact.addr_value': '〒963-0531<br>日本福岛县�的山市西田町三�的目吉田252',
+    'form.type': '咨询类型',
+    'form.select': '请选择',
+    'form.concert': '音乐会预约',
+    'form.sponsor': '赞助咨询',
+    'form.other': '其他咨询',
+    'form.name': '姓名',
+    'form.name_ph': '您的姓名',
+    'form.email': '电子邮件',
+    'form.tel': '电话',
+    'form.message': '留言',
+    'form.message_ph': '请随时联系我们。',
+    'form.submit': '提交',
+    'footer.org': 'Music Forest协会 - 触动心灵的礼物音乐会',
+    'footer.address': '〒963-0531 日本福岛县郡山市西田町三町目吉田252',
+    'footer.fb_org': 'Facebook（组织）',
+    'footer.fb_rep': 'Facebook（代表）',
+    'footer.copy': '&copy; 2016 Music Forest. 保留所有权利。'
   }
 };
 
@@ -1874,6 +2184,11 @@ function setLang(lang) {
   // Update current language display
   document.querySelector('.lang-current').textContent = langLabels[lang];
 
+  // Update page title
+  if (translations[lang] && translations[lang]['site.title']) {
+    document.title = translations[lang]['site.title'];
+  }
+
   // Update active state in menu
   document.querySelectorAll('.lang-option').forEach(opt => {
     opt.classList.toggle('active', opt.dataset.lang === lang);
@@ -1888,6 +2203,30 @@ function setLang(lang) {
     const key = el.dataset.i18n;
     if (translations[lang] && translations[lang][key]) {
       el.innerHTML = translations[lang][key];
+    }
+  });
+
+  // Translate placeholders
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.dataset.i18nPlaceholder;
+    if (translations[lang] && translations[lang][key]) {
+      el.placeholder = translations[lang][key];
+    }
+  });
+
+  // Translate alt attributes
+  document.querySelectorAll('[data-i18n-alt]').forEach(el => {
+    const key = el.dataset.i18nAlt;
+    if (translations[lang] && translations[lang][key]) {
+      el.alt = translations[lang][key];
+    }
+  });
+
+  // Translate select options
+  document.querySelectorAll('select option[data-i18n]').forEach(opt => {
+    const key = opt.dataset.i18n;
+    if (translations[lang] && translations[lang][key]) {
+      opt.textContent = translations[lang][key];
     }
   });
 
